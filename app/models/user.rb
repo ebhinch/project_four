@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   include DeviseTokenAuth::Concerns::User
 
-  has_many :comments, dependent: :destroy
-  
+  has_many :comments
+  has_many :events, through: :comments
+
 end
