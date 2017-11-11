@@ -6,6 +6,11 @@ class Api::TownsController < ApplicationController
     end
 
 
+    def show
+        @town = Town.find_by_id(params[:id])
+        render json: @town, include: [:events]
+    end
+
     
 end
 
