@@ -7,7 +7,8 @@ class Api::TownsController < ApplicationController
 
 
     def show
-        @town = Town.find_by_id(params[:id])
+        town_id = params[:id]
+        @town = Town.find_by_id(town_id)
         render json: @town, include: [:events]
     end
 
