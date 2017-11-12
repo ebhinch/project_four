@@ -3,7 +3,7 @@ import Footer from "./Footer"
 import Header from "./Header"
 
 
-const HomePage = () => {
+const HomePage = (props) => {
     return (
         <div>
             <Header />

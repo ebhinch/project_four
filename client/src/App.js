@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 
 import axios from "axios"
-import TownList from "./components/TownList"
+import TownList from "./components/town/TownList"
 import HomePage from "./components/HomePage"
+import Town from "./components/town/Town"
 
 
 
@@ -29,6 +30,7 @@ class App extends Component {
        <Switch>
          <Route exact path="/" component={HomePage} />
          <Route exact path="/towns" component={TownList}/>
+         <Route exact path="/towns/:id" component={Town} />
        </Switch>
      </Router>
     );

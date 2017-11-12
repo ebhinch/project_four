@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import axios from "axios"
-
+import Town from "./Town"
 class TownList extends Component {
     state = {
         towns: []
@@ -25,8 +25,8 @@ class TownList extends Component {
                 <h1>THIS IS THE TOWN LIST PAGE</h1>
                 {this.state.towns.map((town) => {
                     return (<div>
-                        <h3>{town.name}</h3>
-                        <p>{town.description}</p>
+                        <Link to={`towns/${town.id}`}>{town.name}</Link>
+          
                     </div>
                     )
 
