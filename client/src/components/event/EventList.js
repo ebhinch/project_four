@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Event from "./Event"
 
 const EventList = (props) => {
     return (
@@ -7,7 +7,9 @@ const EventList = (props) => {
             <h1>THIS IS THE EVENT LIST COMPONENT</h1>
             {props.events.map((event) => {
                 return (
-                    <div>{event.name}</div>
+                    <div>
+                        <Event {...event} key={event.id}/>
+                    </div>
                 )
             })}
 
