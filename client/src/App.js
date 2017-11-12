@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import axios from "axios"
 import TownList from "./components/TownList"
+import HomePage from "./components/HomePage"
 
 
 
@@ -26,6 +27,7 @@ class App extends Component {
     return (
      <Router>
        <Switch>
+         <Route exact path="/" component={HomePage} />
          <Route exact path="/towns" component={TownList}/>
        </Switch>
      </Router>
