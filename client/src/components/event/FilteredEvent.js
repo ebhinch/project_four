@@ -8,7 +8,8 @@ const FilteredEvent = (props) => {
             <Link to={`/towns/${props.townId}/events/${props.event.id}`}>{props.event.name}</Link>
 
             <p>{props.event.date}</p>
-            <button>Delete Event</button>
+
+            <button onClick={() => props.deleteEvent(props.event.id)}>Delete Event</button>
 
         </div>
     );

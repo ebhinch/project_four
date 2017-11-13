@@ -30,7 +30,7 @@ class WSEventList extends Component {
                 {this.state.filteredEvents.map((event) => {
                     return (
 
-                        <FilteredEvent townId={this.props.townId} event={event} />
+                        <FilteredEvent townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
 
 
                     )

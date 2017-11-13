@@ -38,19 +38,39 @@ class Town extends Component {
     }
 
 
+    deleteEvent = async (eventId) => {
+        try {
+            const { id } = this.props.match.params
+            const response = await axios.delete(`/api/towns/${id}/events/${eventId}`)
+            console.log(response)
+            this.setState({events: response.data})
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
 
     render() {
         return (
             <div>
                 <h1>THIS IS THE INDIVIDUAL TOWN PAGE</h1>
+
                 <h2>{this.state.town.name} </h2>
+
                 <h4>{this.state.town.description}</h4>
+
                 <h4>{this.state.town.population}</h4>
+
                 <img src={this.state.town.image} />
+
                 <button onClick={this.toggleShowWS}>Winter / Spring</button>
-                {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} /> : null}
+
+                {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
+
                 <button onClick={this.toggleShowSF}>Summer / Fall </button>
-                {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} /> : null}
+
+                {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
          
 
