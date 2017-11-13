@@ -2,9 +2,6 @@ import React from 'react';
 import CommentList from "../comment/CommentList"
 
 
-
-
-
 const Event = (props) => {
     return (
         <div>
