@@ -18,6 +18,7 @@ class Town extends Component {
 
     async componentWillMount() {
         this.getEvents();
+    
     }
 
     getEvents = async () => {
@@ -31,6 +32,10 @@ class Town extends Component {
         }
     }
 
+
+
+
+
     toggleShowWS = () => {
         this.setState({ showWS: !this.state.showWS })
     }
@@ -42,6 +47,9 @@ class Town extends Component {
     toggleShowCreate = () => {
         this.setState({ showCreate: !this.state.showCreate })
     }
+
+
+
 
 
     deleteEvent = async (eventId) => {
@@ -79,6 +87,8 @@ class Town extends Component {
                 <h4>{this.state.town.description}</h4>
 
                 <h4>{this.state.town.population}</h4>
+
+              
 
                 <img src={this.state.town.image} />
 
