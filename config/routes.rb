@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   namespace :api do 
     resources :towns, only: [:index, :show] do
-      resources :events, only: [:index, :show, :create] do
-        resources :comments, only: [:create, :update, :destroy, :show, :index]
+      resources :events do
+        resources :comments
       end
     end 
   end
