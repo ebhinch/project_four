@@ -20,7 +20,7 @@ class Town extends Component {
             const { id } = this.props.match.params
             const response = await axios.get(`/api/towns/${id}`)
             this.setState({ town: response.data})
-            const eventResponse = await axios.get(`/api`)
+            // const eventResponse = await axios.get(`/api`)
         } catch(error) {
             console.log(error)
         }

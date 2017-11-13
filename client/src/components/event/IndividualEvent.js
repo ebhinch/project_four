@@ -16,9 +16,10 @@ class IndividualEvent extends Component {
     getComments = async () => {
         try {
             const { id } = this.props.match.params
+            console.log(id)
             const response = await axios.get(`/api/events/${id}`)
             this.setState({ event: response.data})
-            const commentResponse = await axios.get(`/api`)
+            // const commentResponse = await axios.get(`/api`)
         } catch(error) {
             console.log(error)
         }
