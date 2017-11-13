@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Event from "./Event"
 import { Link } from "react-router-dom"
+import FilteredEvent from "./FilteredEvent"
 
 
 
@@ -29,13 +30,7 @@ class EventList extends Component {
                 <h1>THIS IS THE EVENT LIST COMPONENT</h1>
                 {this.state.filteredEvents.map((event) => {
                     return (
-                        <div>
-
-
-                            <Link to={`/towns/${this.props.townId}/events/${event.id}`}>{event.name}</Link>
-
-                            <p>{event.date}</p>
-                        </div>
+                        <FilteredEvent townId={this.props.townId} event={event} />
                     )
                 })}
 

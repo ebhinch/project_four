@@ -220,6 +220,7 @@ ericaCommentOne = Comment.create({
     event_id: trideEventOne.id
 })
 
+
 oliveCommentOne = Comment.create({
     title: "Dog Friendly!",
     text: "We did this hike last year and brought our puppy...she loved it!",

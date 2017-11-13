@@ -27,7 +27,7 @@ class EventList extends Component {
         return (
             <div>
                 <h1>THIS IS THE EVENT LIST COMPONENT</h1>
-                {this.getEvents}
+                {this.getEvents(this.props)}
 
             </div>
         );

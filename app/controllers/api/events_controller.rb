@@ -13,6 +13,7 @@ class Api::EventsController < ApplicationController
             render json: @event, include: [:comments]
         end
     
+        
         def create
             @event = Event.create(event_params)
             render json: @event
