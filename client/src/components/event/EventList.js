@@ -1,9 +1,4 @@
 
-import Event from "./Event"
-
-
-
-
 import React, { Component } from 'react';
 
 class EventList extends Component {
@@ -16,7 +11,7 @@ class EventList extends Component {
         {props.events.map((event) => {
             return (
                 <div>
-                    <Event {...event} key={event.id}/>
+         
                 </div>
             )
         })}
