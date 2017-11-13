@@ -25,7 +25,7 @@ class TownList extends Component {
                 <h1>THIS IS THE TOWN LIST PAGE</h1>
                 {this.state.towns.map((town) => {
                     return (<div>
-                        <Link to={`${town.id}`}>{town.name}</Link>
+                        <Link to={`/towns/${town.id}`}>{town.name}</Link>
           
                     </div>
                     )
