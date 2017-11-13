@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from "axios"
 import WSEventList from "../event/WSEventList"
 import SFEventList from "../event/SFEventList"
+import CreateEvent from "../event/CreateEvent"
 
 class Town extends Component {
     state = {
@@ -11,7 +12,8 @@ class Town extends Component {
             events: []
         },
         showWS: false,
-        showSF: false
+        showSF: false,
+        showCreate: false
     }
 
     async componentWillMount() {
@@ -35,6 +37,10 @@ class Town extends Component {
 
     toggleShowSF = () => {
         this.setState({ showSF: !this.state.showSF })
+    }
+
+    toggleShowCreate = () => {
+        this.setState({ showCreate: !this.state.showCreate })
     }
 
 
@@ -71,6 +77,8 @@ class Town extends Component {
                 {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
                 <button onClick={this.toggleShowSF}>Summer / Fall </button>
+
+                <button onClick={this.toggleShowCreate}>Submit a New Event</button>
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
