@@ -19,7 +19,7 @@ class EventList extends Component {
         const array = this.props.events.filter((event) => {
             return event.season === "sf"
         })
-        this.setState({filteredEvents: array})
+        this.setState({ filteredEvents: array })
     }
 
 
@@ -30,12 +30,16 @@ class EventList extends Component {
                 {this.state.filteredEvents.map((event) => {
                     return (
                         <div>
+
+
+                            <Link to={`/towns/${this.props.townId}/events/${event.id}`}>{event.name}</Link>
+
                             <Link to="">{event.name}</Link>
                             <p>{event.date}</p>
                         </div>
                     )
                 })}
-          
+
 
             </div>
         );

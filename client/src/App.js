@@ -31,7 +31,7 @@ class App extends Component {
          <Route exact path="/" component={HomePage} />
          <Route exact path="/towns" component={TownList}/>
          <Route exact path="/towns/:id" component={Town} />
-         <Route exact path="/towns/:id/events/:id" component={IndividualEvent}/>
+         <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent}/>
        </Switch>
      </Router>
     );
