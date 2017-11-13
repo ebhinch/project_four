@@ -1,44 +1,33 @@
 import React, { Component } from 'react';
-
 import { Link } from "react-router-dom"
 import FilteredEvent from "./FilteredEvent"
 
 
-
 class SFEventList extends Component {
-    state = {
-        showWS: false,
-        showSF: false,
-        filteredEvents: []
-    }
-
-    componentWillMount() {
-        this.getSFEvents()
-    }
-
-    getSFEvents = () => {
+    render() {
         const array = this.props.events.filter((event) => {
             return event.season === "sf"
         })
-        this.setState({ filteredEvents: array })
-    }
 
-
-    render() {
         return (
             <div>
-                <h1>THIS IS THE SF EVENT LIST COMPONENT</h1>
-                {this.state.filteredEvents.map((event) => {
-                    return (
-                        <FilteredEvent townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
-                    )
-                })}
+            <h1>THIS IS THE SF EVENT LIST COMPONENT</h1>
+            {array.map((event) => {
+                return (
+
+                    <FilteredEvent key={event.id} townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
 
 
-            </div>
+                )
+            })}
+
+
+        </div>
         );
     }
 }
+
+
 
 export default SFEventList;
 
