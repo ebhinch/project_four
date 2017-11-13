@@ -6,15 +6,19 @@ import Event from "./Event"
 class EventList extends Component {
     state = {
         showWS: false,
-        showSF: false
+        showSF: false,
+        filteredEvents: []
     }
 
-    getWSEvents = async (props) => {
-        {props.events.filter((event) => {
-            return (
-            event.season === "ws"
-            )
-        })}
+    componentWillMount() {
+        this.getWSEvents()
+    }
+
+    getWSEvents = () => {
+        const array = this.props.events.filter((event) => {
+            return event.season === "ws"
+        })
+        this.setState({filteredEvents: array})
     }
 
 
@@ -22,7 +26,15 @@ class EventList extends Component {
         return (
             <div>
                 <h1>THIS IS THE EVENT LIST COMPONENT</h1>
-                {this.getWSEvents}
+                {this.state.filteredEvents.map((event) => {
+                    return (
+                        <div>
+                            <h2>{event.name}</h2>
+                            <p>{event.date}</p>
+                        </div>
+                    )
+                })}
+          
 
             </div>
         );
