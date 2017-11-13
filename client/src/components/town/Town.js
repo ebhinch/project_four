@@ -1,7 +1,6 @@
 
 
 import React, { Component } from 'react';
-import EventList from "../event/EventList"
 import axios from "axios"
 import WSEventList from "../event/WSEventList"
 import SFEventList from "../event/SFEventList"

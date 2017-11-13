@@ -4,7 +4,7 @@ import FilteredEvent from "./FilteredEvent"
 
 
 
-class EventList extends Component {
+class WSEventList extends Component {
     state = {
         showWS: false,
         showSF: false,
@@ -42,7 +42,7 @@ class EventList extends Component {
     }
 }
 
-export default EventList;
+export default WSEventList;
 
 
 
