@@ -30,12 +30,15 @@ class EventList extends Component {
                 {this.state.filteredEvents.map((event) => {
                     return (
                         <div>
-                            <Link to="">{event.name}</Link>
+
+
+                            <Link to={`/towns/${this.props.townId}/events/${event.id}`}>{event.name}</Link>
+
                             <p>{event.date}</p>
                         </div>
                     )
                 })}
-          
+
 
             </div>
         );
