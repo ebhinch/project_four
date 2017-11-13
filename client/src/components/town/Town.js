@@ -57,6 +57,15 @@ class Town extends Component {
         }
     }
 
+    pushEvents = (newEvent) => {
+        const newTown = {...this.state.town}
+        newTown.events.unshift(newEvent)
+    
+        this.setState({town: newTown })
+
+    }
+
+
 
 
     render() {
@@ -82,6 +91,7 @@ class Town extends Component {
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
+                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} pushEvents={this.pushEvents} /> : null }
 
 
 
