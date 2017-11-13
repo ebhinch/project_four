@@ -1,10 +1,7 @@
-
+import React, { Component } from 'react';
 import Event from "./Event"
 
 
-
-
-import React, { Component } from 'react';
 
 class EventList extends Component {
     state = {
@@ -12,22 +9,20 @@ class EventList extends Component {
         showSF: false
     }
 
-    getEvents = async (props) => {
-        {props.events.map((event) => {
+    getWSEvents = async (props) => {
+        {props.events.filter((event) => {
             return (
-                <div>
-                    <Event {...event} key={event.id}/>
-                </div>
+            event.season === "ws"
             )
         })}
-
     }
+
 
     render() {
         return (
             <div>
                 <h1>THIS IS THE EVENT LIST COMPONENT</h1>
-                {this.getEvents}
+                {this.getWSEvents}
 
             </div>
         );
@@ -35,9 +30,6 @@ class EventList extends Component {
 }
 
 export default EventList;
-
-
-
 
 
 

@@ -3,12 +3,15 @@
 import React, { Component } from 'react';
 import EventList from "../event/EventList"
 import axios from "axios"
+import WSEventList from "../event/WSEventList"
 
 class Town extends Component {
     state = {
         town: {
             events: []
-        }
+        },
+        showWS: false,
+        showSF: false
     }
 
     async componentWillMount() {
@@ -26,6 +29,14 @@ class Town extends Component {
         }
     }
 
+    toggleShowWS = () => {
+        this.setState({ showWS: !this.state.showWS })
+    }
+
+    toggleShowSF = () => {
+        this.setState({ showSF: !this.state.showSF})
+    }
+
 
 
     render() {
@@ -36,7 +47,12 @@ class Town extends Component {
                 <h4>{this.state.town.description}</h4>
                 <h4>{this.state.town.population}</h4>
                 <img src={this.state.town.image} />
-                <EventList town={this.state.town} events={this.state.town.events} />
+                <button onClick={this.toggleShowWS}>Winter / Spring</button>
+                {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} /> : null}
+         
+
+
+            
             </div>
         );
     }
