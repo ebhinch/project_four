@@ -22,9 +22,9 @@ class Town extends Component {
         try {
             const { id } = this.props.match.params
             const response = await axios.get(`/api/towns/${id}`)
-            this.setState({ town: response.data})
+            this.setState({ town: response.data })
             // const eventResponse = await axios.get(`/api`)
-        } catch(error) {
+        } catch (error) {
             console.log(error)
         }
     }
@@ -34,7 +34,7 @@ class Town extends Component {
     }
 
     toggleShowSF = () => {
-        this.setState({ showSF: !this.state.showSF})
+        this.setState({ showSF: !this.state.showSF })
     }
 
 
@@ -45,7 +45,7 @@ class Town extends Component {
             console.log(response)
             const clonedTown = { ...this.state.town }
             clonedTown.events = response.data
-            this.setState({town: clonedTown})
+            this.setState({ town: clonedTown })
         } catch (error) {
             console.log(error)
         }
@@ -74,10 +74,10 @@ class Town extends Component {
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-         
 
 
-            
+
+
             </div>
         );
     }

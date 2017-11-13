@@ -32,5 +32,3 @@ class SFEventList extends Component {
 export default SFEventList;
 
 
-
-
