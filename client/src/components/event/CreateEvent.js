@@ -61,6 +61,7 @@ class CreateEvent extends Component {
                             name="date"
                             type="text"
                             value={this.state.newEvent.date}
+                            required
                         />
                     </div>
 
@@ -70,6 +71,7 @@ class CreateEvent extends Component {
                             name="season"
                             type="text"
                             value={this.state.newEvent.season}
+                            required
                         />
                     </div>
 
@@ -79,6 +81,7 @@ class CreateEvent extends Component {
                             name="image"
                             type="text"
                             value={this.state.newEvent.image}
+                            required
                         />
                     </div>
 
