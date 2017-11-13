@@ -1,0 +1,71 @@
+import React, { Component } from 'react';
+import axios from "axios";
+
+class EditEvent extends Component {
+    state = {
+        updatedEvent: {
+            name: "",
+            date: ""
+        }
+    }
+
+    componentWillMount() {
+        console.log(this.props.event)
+        this.setState({ updatedEvent: this.props.event })
+    }
+
+    handleChange = (event) => {
+        const attribute = event.target.name
+        const clonedEvent = { ...this.state.updatedEvent }
+        clonedEvent[attribute] = event.target.value
+        console.log(clonedEvent)
+        this.setState({ updatedEvent: clonedEvent })
+    }
+
+    handleSubmit = async (event) => {
+        event.preventDefault()
+        const { eventId } = this.props
+        const { townId } = this.props
+        const clonedEvent = { ...this.state.updatedEvent }
+        const response = await axios.patch(`/api/towns/${townId}/events/${eventId}`, {
+            event: clonedEvent
+        })
+        console.log(response)
+        this.setState({ event: response.data })
+    }
+
+
+
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+
+                    <div>
+                        <label htmlFor="name">Name: </label>
+                        <input onChange={this.handleChange}
+                            name="name"
+                            type="text"
+                            value={this.state.updatedEvent.name}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="date">Name: </label>
+                        <input onChange={this.handleChange}
+                            name="date"
+                            type="text"
+                            value={this.state.updatedEvent.date}
+                        />
+                    </div>
+
+                    <input type="submit" value="Save Event Updates" />
+
+
+                </form>
+            </div>
+        );
+    }
+}
+
+export default EditEvent;

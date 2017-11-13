@@ -43,7 +43,9 @@ class Town extends Component {
             const { id } = this.props.match.params
             const response = await axios.delete(`/api/towns/${id}/events/${eventId}`)
             console.log(response)
-            this.setState({events: response.data})
+            const clonedTown = { ...this.state.town }
+            clonedTown.events = response.data
+            this.setState({town: clonedTown})
         } catch (error) {
             console.log(error)
         }

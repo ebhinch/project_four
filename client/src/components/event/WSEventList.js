@@ -5,32 +5,18 @@ import FilteredEvent from "./FilteredEvent"
 
 
 class WSEventList extends Component {
-    state = {
-        showWS: false,
-        showSF: false,
-        filteredEvents: []
-    }
-
-    componentWillMount() {
-        this.getWSEvents()
-    }
-
-    getWSEvents = () => {
+    render() {
         const array = this.props.events.filter((event) => {
             return event.season === "ws"
         })
-        this.setState({ filteredEvents: array })
-    }
 
-
-    render() {
         return (
             <div>
-                <h1>THIS IS THE EVENT LIST COMPONENT</h1>
-                {this.state.filteredEvents.map((event) => {
+                <h1>THIS IS THE WS EVENT LIST COMPONENT</h1>
+                {array.map((event) => {
                     return (
 
-                        <FilteredEvent townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
+                        <FilteredEvent key={event.id} townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
 
 
                     )

@@ -27,10 +27,10 @@ class SFEventList extends Component {
     render() {
         return (
             <div>
-                <h1>THIS IS THE EVENT LIST COMPONENT</h1>
+                <h1>THIS IS THE SF EVENT LIST COMPONENT</h1>
                 {this.state.filteredEvents.map((event) => {
                     return (
-                        <FilteredEvent townId={this.props.townId} event={event} />
+                        <FilteredEvent townId={this.props.townId} deleteEvent={this.props.deleteEvent} event={event} />
                     )
                 })}
 
