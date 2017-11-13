@@ -34,7 +34,6 @@ class EventList extends Component {
 
                             <Link to={`/towns/${this.props.townId}/events/${event.id}`}>{event.name}</Link>
 
-                            <Link to="">{event.name}</Link>
                             <p>{event.date}</p>
                         </div>
                     )
