@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Event from "./Event"
+import { Link } from "react-router-dom"
 
 
 
@@ -29,7 +30,7 @@ class EventList extends Component {
                 {this.state.filteredEvents.map((event) => {
                     return (
                         <div>
-                            <h2>{event.name}</h2>
+                            <Link to="">{event.name}</Link>
                             <p>{event.date}</p>
                         </div>
                     )
