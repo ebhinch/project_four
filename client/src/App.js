@@ -6,7 +6,7 @@ import axios from "axios"
 import TownList from "./components/town/TownList"
 import HomePage from "./components/HomePage"
 import Town from "./components/town/Town"
-
+import IndividualEvent from "./components/event/IndividualEvent"
 
 
 class App extends Component {
@@ -31,6 +31,7 @@ class App extends Component {
          <Route exact path="/" component={HomePage} />
          <Route exact path="/towns" component={TownList}/>
          <Route exact path="/towns/:id" component={Town} />
+         <Route exact path="/towns/:id/events/:id" component={IndividualEvent} />
        </Switch>
      </Router>
     );

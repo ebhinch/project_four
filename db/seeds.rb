@@ -3,6 +3,9 @@ Event.destroy_all
 User.destroy_all
 Comment.destroy_all
 
+
+comments = []
+
 telluride = Town.create({
     name: "Telluride, Colorado",
     lat: 37.9375,
