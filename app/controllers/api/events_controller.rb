@@ -15,7 +15,8 @@ class Api::EventsController < ApplicationController
     
         
         def create
-            @event = Event.create(event_params)
+            @town = Town.find_by_id params[:town_id]
+            @event = @town.events.create(event_params)
             render json: @event
         end
 

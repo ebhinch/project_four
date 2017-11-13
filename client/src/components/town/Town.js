@@ -51,6 +51,7 @@ class Town extends Component {
             console.log(response)
             const clonedTown = { ...this.state.town }
             clonedTown.events = response.data
+            console.log(response.data)
             this.setState({ town: clonedTown })
         } catch (error) {
             console.log(error)
@@ -91,7 +92,7 @@ class Town extends Component {
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} pushEvents={this.pushEvents} /> : null }
+                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null }
 
 
 

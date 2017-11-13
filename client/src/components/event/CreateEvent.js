@@ -8,8 +8,7 @@ class CreateEvent extends Component {
             name: "",
             date: "",
             season: "",
-            image: "",
-            town_id: null
+            image: ""
         }
     }
     
@@ -23,11 +22,15 @@ class CreateEvent extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
+        
         const { townId } = this.props
+        console.log(townId)
         const response = await axios.post(`/api/towns/${townId}/events`, {
             event: this.state.newEvent
         })
+        console.log(response.data)
         this.props.pushEvents(response.data)
+        this.props.toggleShowCreate()
     }
 
 
@@ -49,7 +52,7 @@ class CreateEvent extends Component {
                             name="name"
                             type="text"
                             value={this.state.newEvent.name}
-                        />
+                         required />
                     </div>
 
                     <div>
