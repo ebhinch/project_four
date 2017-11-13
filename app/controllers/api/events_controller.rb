@@ -1,29 +1,30 @@
 class Api::EventsController < ApplicationController
-
-    def index
-        @events = Event.all
-
-        render json: @events
-    end
-
-
-    def show
-        event_id = params[:id]
-        @event = Event.find_by_id(event_id)
-        render json: @event, include: [:comments]
-    end
-
-    def create
-        @event = Event.create(event_params)
-        render json: @event
-    end
-
-
-    private
     
-        def event_params
-            params.require(:event).permit(:name, :date, :season, :image, :town_id)
+        def index
+            @events = Event.all
+    
+            render json: @events
         end
     
-    end
-     
+    
+        def show
+            event_id = params[:id]
+            @event = Event.find_by_id(event_id)
+            render json: @event, include: [:comments]
+        end
+    
+        def create
+            @event = Event.create(event_params)
+            render json: @event
+        end
+    
+    
+        private
+        
+            def event_params
+                params.require(:event).permit(:name, :date, :season, :image, :town_id)
+            end
+        
+        end
+         
+    
