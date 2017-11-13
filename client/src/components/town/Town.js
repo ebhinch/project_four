@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import EventList from "../event/EventList"
 import axios from "axios"
 import WSEventList from "../event/WSEventList"
+import SFEventList from "../event/SFEventList"
 
 class Town extends Component {
     state = {
@@ -49,6 +50,9 @@ class Town extends Component {
                 <img src={this.state.town.image} />
                 <button onClick={this.toggleShowWS}>Winter / Spring</button>
                 {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} /> : null}
+                <button onClick={this.toggleShowSF}>Summer / Fall </button>
+                {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} /> : null}
+
          
 
 
