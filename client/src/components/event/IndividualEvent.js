@@ -3,6 +3,8 @@ import axios from "axios"
 import CommentList from "../comment/CommentList"
 import { Link } from 'react-router-dom'
 import EditEvent from "./EditEvent"
+import CreateComment from "../comment/CreateComment"
+
 
 
 class IndividualEvent extends Component {
@@ -48,6 +50,8 @@ class IndividualEvent extends Component {
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} updateEvent={this.updateEvent} /> : null }
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
+
+                <CreateComment event={this.state.event}/>
             </div>
         );
     }

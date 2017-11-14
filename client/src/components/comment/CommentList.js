@@ -1,6 +1,5 @@
 import React from 'react';
 import Comment from "./Comment"
-import CreateComment from "./CreateComment"
 
 const CommentList = (props) => {
     return (
@@ -15,7 +14,6 @@ const CommentList = (props) => {
                 )
             })}
             <button>Add Comment</button>
-            <CreateComment />
 
         </div>
     );
