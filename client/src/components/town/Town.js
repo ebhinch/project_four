@@ -11,14 +11,15 @@ class Town extends Component {
         town: {
             events: []
         },
+        elevation: 0,
         showWS: false,
         showSF: false,
         showCreate: false
     }
 
     async componentWillMount() {
-        this.getEvents();
-        // this.getElevation(); 
+        await this.getEvents();
+        await this.getElevation();
     }
 
     getEvents = async () => {
@@ -26,23 +27,31 @@ class Town extends Component {
             const { id } = this.props.match.params
             const response = await axios.get(`/api/towns/${id}`)
             this.setState({ town: response.data })
-            // const eventResponse = await axios.get(`/api`)
         } catch (error) {
             console.log(error)
         }
     }
 
-    // getElevation = async () => {
-    //     try {
-    //         const { lng } = this.props.match.params
-    //         const { lat } = this.props.match.params
-    //         const response = await axios.get(`https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},${lng}&key=process.env.REACT_APP_API_KEY}`)
-    //         console.log(response)
+    // localhost:3001/api/towns/18/elevationapi/?lat=38.7391536&lng=-114.9847034
 
-    //     } catch(error) {
-    //         console.log(error)
-    //     }
-    // }
+    getElevation = async () => {
+        try {
+            const { id } = this.props.match.params
+            console.log(id)
+            const lat = this.state.town.lat
+            console.log(lat)
+            const lng = this.state.town.lng
+            console.log(lng)
+            const response = await axios.get(`/api/towns/${id}/elevationapi/?lat=${lat}&lng=${lng}`)
+            console.log(response.data)
+            this.setState({ elevation: response.data.results[0].elevation })
+
+
+
+        } catch(error) {
+            console.log(error)
+        }
+    }
 
 
 
@@ -93,6 +102,8 @@ class Town extends Component {
                 <h4>{this.state.town.description}</h4>
 
                 <h4>{this.state.town.population}</h4>
+
+                <h4>{this.state.elevation}</h4>
 
               
 
