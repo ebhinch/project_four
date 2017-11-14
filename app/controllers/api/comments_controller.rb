@@ -2,8 +2,7 @@ class Api::CommentsController < ApplicationController
     before_action :authenticate_user!, :except => [:index]
 
     def index
-        # @user = current_user
-        @comments = @user.comments
+        @comments = Comment.all
 
         render json: @comments
     end
@@ -12,9 +11,10 @@ class Api::CommentsController < ApplicationController
 
     def create
         @user = current_user
-        # @town = Town.find(params[:id])
+        @event = Event.find(params[:id])
 
         @comment = @user.comments.build(comment_params)
+        @comment.event = @event
 
         if @user.save
             render json: @comment, status: created, location: @comment
@@ -24,15 +24,15 @@ class Api::CommentsController < ApplicationController
 end
 
 
-    # def create
-        # @user = current_user
-    #     @town = Town.find(params[:id])
-    #     @comment = Comment.new(comment_params)
-    #     @town.comments << @comment
-    #     @town.save!
-    #     render json: @comment
+    def create
+        @user = current_user
+        @town = Town.find(params[:id])
+        @comment = Comment.new(comment_params)
+        @town.comments << @comment
+        @town.save!
+        render json: @comment
 
-    # end
+    end
 
 
     private

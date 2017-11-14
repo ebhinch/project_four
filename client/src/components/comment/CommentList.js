@@ -9,9 +9,12 @@ const CommentList = (props) => {
                 return (
                     <div>
                         <Comment {...comment} key={comment.id} />
+
                     </div>
                 )
             })}
+            <button>Add Comment</button>
+
         </div>
     );
 };
