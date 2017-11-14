@@ -30,6 +30,7 @@ class CreateComment extends Component {
 
         console.log(response)
         this.props.pushComment(response.data)
+        this.props.toggleShowCommentForm()
     }
 
     render() {
