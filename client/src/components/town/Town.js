@@ -18,7 +18,7 @@ class Town extends Component {
 
     async componentWillMount() {
         this.getEvents();
-    
+        // this.getElevation(); 
     }
 
     getEvents = async () => {
@@ -32,7 +32,17 @@ class Town extends Component {
         }
     }
 
+    // getElevation = async () => {
+    //     try {
+    //         const { lng } = this.props.match.params
+    //         const { lat } = this.props.match.params
+    //         const response = await axios.get(`https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},${lng}&key=process.env.REACT_APP_API_KEY}`)
+    //         console.log(response)
 
+    //     } catch(error) {
+    //         console.log(error)
+    //     }
+    // }
 
 
 
@@ -47,10 +57,6 @@ class Town extends Component {
     toggleShowCreate = () => {
         this.setState({ showCreate: !this.state.showCreate })
     }
-
-
-
-
 
     deleteEvent = async (eventId) => {
         try {
