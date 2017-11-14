@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     resources :towns, only: [:index, :show] do
+      get "elevationapi", to:"google_api#show"
       resources :events do
         resources :comments
       end
