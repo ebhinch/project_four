@@ -35,14 +35,10 @@ class CreateEvent extends Component {
 
 
 
-
     render() {
         return (
             <div>
                 <h1>THIS IS THE CREATE EVENT COMPONENT</h1>
-                {/* <input onBlur={this.handleSubmit} onChangeCapture={this.handleChange} name="name" value={this.state.newEvent.name} /> */}
-
-
 
                 <form onSubmit={this.handleSubmit}>
 

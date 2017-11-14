@@ -105,8 +105,6 @@ class Town extends Component {
 
                 <h4>{this.state.elevation}</h4>
 
-              
-
                 <img src={this.state.town.image} />
 
                 <button onClick={this.toggleShowWS}>Winter / Spring</button>

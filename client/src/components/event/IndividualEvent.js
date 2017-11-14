@@ -12,7 +12,8 @@ class IndividualEvent extends Component {
         event: {
             comments: []
         },
-        editEventDetails: false
+        editEventDetails: false,
+        addComment: false
     }
 
     async componentWillMount() {
@@ -36,6 +37,19 @@ class IndividualEvent extends Component {
         this.setState({ editEventDetails: !this.state.editEventDetails })
     }
 
+    toggleShowCommentForm = () => {
+        this.setState({ addComment: !this.state.addComment})
+    }
+
+
+    pushComment = (newComment) => {
+        const newEvent = {...this.state.event}
+        newEvent.comments.unshift(newComment)
+    
+        this.setState({comment: newComment })
+
+    }
+
 
     render() {
         return (
@@ -47,11 +61,14 @@ class IndividualEvent extends Component {
 
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
 
+                <button onClick={this.toggleShowCommentForm}>Add a Comment</button>
+
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} updateEvent={this.updateEvent} /> : null }
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
 
-                <CreateComment event={this.state.event}/>
+                {this.state.addComment ? <CreateComment event={this.state.event} toggleShowCommentForm={this.toggleShowCommentForm} pushComment={this.pushComment} eventId={this.props.match.params.eventId} townId={this.props.match.params.townId} /> : null}
+
             </div>
         );
     }

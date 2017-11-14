@@ -13,7 +13,7 @@ const CommentList = (props) => {
                     </div>
                 )
             })}
-            <button>Add Comment</button>
+ 
 
         </div>
     );
