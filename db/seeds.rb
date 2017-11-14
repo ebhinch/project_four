@@ -202,7 +202,7 @@ olive = User.create({
 })
 
 missy = User.create({
-    email: "andi@gmail.com",
+    email: "missy@gmail.com",
     password: "password",
     password_confirmation: "password"
 })

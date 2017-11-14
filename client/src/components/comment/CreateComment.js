@@ -30,7 +30,7 @@ class CreateComment extends Component {
             comment: this.state.newComment
         }) 
 
-        console.log(response.data)
+        console.log(response)
         this.props.pushComments(response.data)
     }
 
