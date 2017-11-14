@@ -12,7 +12,7 @@ class Api::CommentsController < ApplicationController
 
     def create
         @user = current_user
-        # @town = Town.find(params[:id])
+        @town = Town.find(params[:id])
 
         @comment = @user.comments.build(comment_params)
 

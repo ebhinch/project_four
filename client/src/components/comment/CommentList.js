@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from "./Comment"
+import CreateComment from "./CreateComment"
 
 const CommentList = (props) => {
     return (
@@ -9,9 +10,13 @@ const CommentList = (props) => {
                 return (
                     <div>
                         <Comment {...comment} key={comment.id} />
+
                     </div>
                 )
             })}
+            <button>Add Comment</button>
+            <CreateComment />
+
         </div>
     );
 };
