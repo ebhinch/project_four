@@ -3,6 +3,8 @@ import axios from "axios"
 import WSEventList from "../event/WSEventList"
 import SFEventList from "../event/SFEventList"
 import CreateEvent from "../event/CreateEvent"
+import EventTextIntro from "./EventTextIntro"
+import SubmitNewEventText from "../event/SubmitNewEventText"
 import styled from 'styled-components'
 
 
@@ -120,15 +122,19 @@ class Town extends Component {
 
                 <img src={this.state.town.image} />
 
-                <button onClick={this.toggleShowWS}>Winter / Spring</button>
+                <EventTextIntro town={this.state.town}/>
+
+                <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
                 {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-                <button onClick={this.toggleShowSF}>Summer / Fall </button>
-
-                <button onClick={this.toggleShowCreate}>Submit a New Event</button>
+                <button onClick={this.toggleShowSF}>Summer | Fall </button>
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
+
+                <SubmitNewEventText town={this.state.town} />
+                
+                <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
 
                 {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
 
