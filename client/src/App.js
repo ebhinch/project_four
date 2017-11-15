@@ -114,27 +114,26 @@ class App extends Component {
     return (
       <Router>
         <div>
-    { this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
+          {this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
 
+          <div>
+            <Header />
+            { this.state.signedIn ?
+                <button onClick={this.signOut}>sign out</button>
+                : <button onClick={this.takeToLogin}>Sign In</button>
+            }
 
-        
-        <div>
-          <Header />
-          {
-            this.state.signedIn ?
-              <button onClick={this.signOut}>sign out</button>
-              : <button onClick={this.takeToLogin}>Sign In</button>
-          }
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/towns" component={TownList} />
+              <Route exact path="/towns/:id" component={Town} />
+              <Route exact path="/login" render={SignUpLogInComponent} />
+              <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
+            </Switch>
 
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/towns" component={TownList} />
-            <Route exact path="/towns/:id" component={Town} />
-            <Route exact path="/login" render={SignUpLogInComponent} />
-            <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
-          </Switch>
-          <Footer />
-        </div>
+            <Footer />
+            
+          </div>
         </div>
       </Router>
     );
