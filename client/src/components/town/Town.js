@@ -14,13 +14,41 @@ const TownBody = styled.div`
         font-family: 'Alegreya Sans SC', sans-serif;
         
     };
+    
     h4 {
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
-        
-    }
+    };
 
-    `
+    button {
+        border-radius: 3px;
+        padding: 0.25em 1em;
+        margin-right: 5%;
+        background: transparent;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 14px;
+    };
+
+    button:hover {
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    };
+    img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        background-repeat: no-repeat;
+        padding-top: 0px;
+        margin-top: 15px;
+        margin-right: 0px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  `
+
+    
+
+
 
 class Town extends Component {
     state = {
@@ -122,7 +150,7 @@ class Town extends Component {
 
                 <img src={this.state.town.image} />
 
-                <EventTextIntro town={this.state.town}/>
+                <EventTextIntro town={this.state.town} />
 
                 <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
@@ -133,7 +161,7 @@ class Town extends Component {
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
                 <SubmitNewEventText town={this.state.town} />
-                
+
                 <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
 
                 {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
