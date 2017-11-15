@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 
 
 import axios from "axios"
@@ -16,7 +16,8 @@ import Footer from "./components/Footer"
 
 class App extends Component {
   state = {
-    signedIn: false
+    signedIn: false,
+    redirectToSignIn: false
   }
 
   async componentWillMount() {
@@ -48,6 +49,7 @@ class App extends Component {
 
       this.setState({
         signedIn: true,
+        redirectToSignIn: false
       })
 
     } catch (error) {
@@ -65,11 +67,11 @@ class App extends Component {
       saveAuthTokens(response.headers)
 
 
-      const posts = await this.getPosts()
-
+      // const posts = await this.getPosts()
+      console.log(response)
       this.setState({
         signedIn: true,
-        posts
+        redirectToSignIn: false
       })
 
     } catch (error) {
@@ -91,21 +93,39 @@ class App extends Component {
     }
   }
 
+  takeToLogin = () => {
+    this.setState({ redirectToSignIn: true })
+  }
+
 
 
   render() {
+
+
+
     const SignUpLogInComponent = () => (
       <SignUpLogIn
         signUp={this.signUp}
         signIn={this.signIn}
+        signedIn={this.signedIn}
       />)
- 
+
 
     return (
       <Router>
         <div>
+    { this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
+
+
+        
+        <div>
           <Header />
-          <button onClick={this.signOut}>sign out</button>
+          {
+            this.state.signedIn ?
+              <button onClick={this.signOut}>sign out</button>
+              : <button onClick={this.takeToLogin}>Sign In</button>
+          }
+
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/towns" component={TownList} />
@@ -114,6 +134,7 @@ class App extends Component {
             <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
           </Switch>
           <Footer />
+        </div>
         </div>
       </Router>
     );
