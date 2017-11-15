@@ -34,6 +34,7 @@ class EditEvent extends Component {
         })
         console.log(response)
         this.props.pushEventEdits(response.data)
+        this.props.toggleEditEvent()
 
     }
 

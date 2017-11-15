@@ -70,7 +70,7 @@ class IndividualEvent extends Component {
 
                 <button onClick={this.toggleShowCommentForm}>Add a Comment</button>
 
-                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} /> : null }
+                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
 
