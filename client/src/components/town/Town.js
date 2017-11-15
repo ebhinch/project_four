@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import axios from "axios"
 import WSEventList from "../event/WSEventList"
@@ -81,7 +79,7 @@ class Town extends Component {
         }
     }
 
-    pushEvents = (newEvent) => {
+        Events = (newEvent) => {
         const newTown = {...this.state.town}
         newTown.events.unshift(newEvent)
     
