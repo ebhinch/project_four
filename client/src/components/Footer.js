@@ -8,12 +8,37 @@ const StyledFooter = styled.div`
     flex-direction: row;
 `
 
+const FooterItem = styled.div`
+width: 100vw;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin: 0px;
+padding-bottom: 10px;
+padding-top: 10px;
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+a:visited {
+    color: rgb(17, 17, 114);
+}
+`
+
 const Footer = () => {
     return (
         <StyledFooter>
-          
-            <Link to={"/towns"}>Town Roster </Link>
-            <Link to={"/login"}>Log In / Create Account</Link>
+            <FooterItem>
+                <ul>
+            <li><Link to={"/towns"}>Town Roster </Link></li>
+            <li><Link to={"/login"}>Log In / Create Account</Link></li>
+            <li><Link to={"/"}>Home</Link></li>
+            </ul>
+            </FooterItem>
         </StyledFooter>
     );
 };

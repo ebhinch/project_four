@@ -24,10 +24,17 @@ injectGlobal`
 }`
 
 const AppBody = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+min-width: 100vw;
 `
+
+const HeaderButton = styled.button`
+width: 10%;
+align-self: flex-end;
+`
+
 
 const SwitchBody = styled.div`
   flex: 1 0 auto;
@@ -130,7 +137,10 @@ class App extends Component {
     return (
       <Router>
         <AppBody>
-
+          {this.state.signedIn ?
+            <HeaderButton onClick={this.signOut}>Sign Out</HeaderButton>
+            : <HeaderButton onClick={this.takeToLogin}>Sign In</HeaderButton>
+          }
           <SwitchBody>
             <Switch>
               <Route exact path="/" component={HomePage} />
@@ -144,10 +154,6 @@ class App extends Component {
 
           <div>
 
-            {this.state.signedIn ?
-              <button onClick={this.signOut}>Sign Out</button>
-              : <button onClick={this.takeToLogin}>Sign In</button>
-            }
 
             <Footer />
 
