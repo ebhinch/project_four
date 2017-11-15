@@ -6,9 +6,9 @@ import FilteredEvent from "./FilteredEvent"
 
 class WSEventList extends Component {
     render() {
-        const array = this.props.events.filter((event) => {
-            return event.season === "ws"
-        })
+        const array = this.props.events.filter(event =>
+            event.season.toLowerCase() === "ws"
+       )
 
         return (
             <div>
@@ -29,9 +29,4 @@ class WSEventList extends Component {
 }
 
 export default WSEventList;
-
-
-
-
-
 

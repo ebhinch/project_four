@@ -5,9 +5,9 @@ import FilteredEvent from "./FilteredEvent"
 
 class SFEventList extends Component {
     render() {
-        const array = this.props.events.filter((event) => {
-            return event.season === "sf"
-        })
+        const array = this.props.events.filter(event =>
+            event.season.toLowerCase() === "sf"
+        )
 
         return (
             <div>
