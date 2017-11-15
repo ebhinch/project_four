@@ -9,8 +9,9 @@ import Town from "./components/town/Town"
 import SignUpLogIn from "./components/SignUpLogIn"
 import CreateComment from "./components/comment/CreateComment"
 import { clearAuthTokens, saveAuthTokens, setAxiosDefaults, userIsLoggedIn } from "./util/SessionHeaderUtil"
-
 import IndividualEvent from "./components/event/IndividualEvent"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 
 class App extends Component {
@@ -103,6 +104,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Header />
         <button onClick={this.signOut}>sign out</button>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -111,6 +113,7 @@ class App extends Component {
           <Route exact path="/login" render={SignUpLogInComponent} />
           <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
         </Switch>
+        <Footer />
         </div>
       </Router>
     );

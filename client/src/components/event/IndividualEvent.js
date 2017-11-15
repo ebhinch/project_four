@@ -6,7 +6,6 @@ import EditEvent from "./EditEvent"
 import CreateComment from "../comment/CreateComment"
 
 
-
 class IndividualEvent extends Component {
     state = {
         event: {
