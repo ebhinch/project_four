@@ -28,11 +28,19 @@ display: flex;
 flex-direction: column;
 min-height: 100vh;
 min-width: 100vw;
+button:hover {
+  font-size: 12px;  
+  }
 `
 
 const HeaderButton = styled.button`
-width: 10%;
 align-self: flex-end;
+border-radius: 3px;
+padding: 0.25em 1em;
+margin-right: 5%;
+margin-top: 3%;
+background: transparent;
+
 `
 
 

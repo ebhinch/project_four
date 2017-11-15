@@ -6,6 +6,7 @@ import styled from 'styled-components'
 const StyledFooter = styled.div`
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
 `
 
 const FooterItem = styled.div`
@@ -27,6 +28,9 @@ ul {
 a:visited {
     color: rgb(17, 17, 114);
 }
+a:hover {
+    font-size: 18px;
+}
 `
 
 const Footer = () => {
@@ -34,10 +38,9 @@ const Footer = () => {
         <StyledFooter>
             <FooterItem>
                 <ul>
-            <li><Link to={"/towns"}>Town Roster </Link></li>
-            <li><Link to={"/login"}>Log In / Create Account</Link></li>
-            <li><Link to={"/"}>Home</Link></li>
-            </ul>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link to={"/towns"}>Town Roster </Link></li>
+                </ul>
             </FooterItem>
         </StyledFooter>
     );
