@@ -50,6 +50,14 @@ class IndividualEvent extends Component {
     }
 
 
+    pushEventEdits = (updatedEvent) => {
+        console.log(updatedEvent)
+        console.log(this.state.event)
+        const event = Object.assign({}, this.state.event, updatedEvent)
+        this.setState({event})
+    }
+
+
     render() {
         return (
             <div>
@@ -62,7 +70,7 @@ class IndividualEvent extends Component {
 
                 <button onClick={this.toggleShowCommentForm}>Add a Comment</button>
 
-                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} updateEvent={this.updateEvent} /> : null }
+                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} /> : null }
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
 

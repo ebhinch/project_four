@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { Redirect } from 'react-router-dom'
+
 
 class EditEvent extends Component {
     state = {
@@ -31,12 +33,13 @@ class EditEvent extends Component {
             event: clonedEvent
         })
         console.log(response)
-        this.setState({ event: response.data })
+        this.props.pushEventEdits(response.data)
+   
     }
 
-
-
     render() {
+
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
