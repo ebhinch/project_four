@@ -42,7 +42,7 @@ class Town extends Component {
             console.log(lng)
             const response = await axios.get(`/api/towns/${id}/elevationapi/?lat=${lat}&lng=${lng}`)
             console.log(response.data)
-            this.setState({ elevation: response.data.results[0].elevation })
+            this.setState({ elevation: response.data.results[0].elevation.toFixed(2) })
 
 
 
