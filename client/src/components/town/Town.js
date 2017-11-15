@@ -79,7 +79,7 @@ class Town extends Component {
         }
     }
 
-        Events = (newEvent) => {
+        pushEvents = (newEvent) => {
         const newTown = {...this.state.town}
         newTown.events.unshift(newEvent)
     
