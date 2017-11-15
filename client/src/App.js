@@ -29,7 +29,8 @@ flex-direction: column;
 min-height: 100vh;
 min-width: 100vw;
 button:hover {
-  font-size: 12px;  
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
   }
 `
 
@@ -40,6 +41,9 @@ padding: 0.25em 1em;
 margin-right: 5%;
 margin-top: 3%;
 background: transparent;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-size: 14px;
+
 
 `
 

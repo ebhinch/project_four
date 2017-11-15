@@ -11,6 +11,7 @@ const StyledFooter = styled.div`
 
 const FooterItem = styled.div`
 width: 100vw;
+font-family: 'Alegreya Sans SC', sans-serif;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 margin: 0px;
 padding-bottom: 10px;
@@ -23,13 +24,13 @@ ul {
     padding-bottom: 2px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 14px;
+    font-size: 18px;
 }
 a:visited {
     color: rgb(17, 17, 114);
 }
 a:hover {
-    font-size: 18px;
+    font-size: 20px;
 }
 `
 
@@ -38,8 +39,8 @@ const Footer = () => {
         <StyledFooter>
             <FooterItem>
                 <ul>
-                    <li><Link to={"/"}>Home</Link></li>
-                    <li><Link to={"/towns"}>Town Roster </Link></li>
+                    <li><Link to={"/"}>HOME</Link></li>
+                    <li><Link to={"/towns"}>TOWN ROSTER</Link></li>
                 </ul>
             </FooterItem>
         </StyledFooter>
