@@ -3,6 +3,22 @@ import axios from "axios"
 import WSEventList from "../event/WSEventList"
 import SFEventList from "../event/SFEventList"
 import CreateEvent from "../event/CreateEvent"
+import styled from 'styled-components'
+
+
+const TownBody = styled.div`
+    h2 {
+        font-size: 2em;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        
+    };
+    h4 {
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        
+    }
+
+    `
 
 class Town extends Component {
     state = {
@@ -46,7 +62,7 @@ class Town extends Component {
 
 
 
-        } catch(error) {
+        } catch (error) {
             console.log(error)
         }
     }
@@ -79,11 +95,11 @@ class Town extends Component {
         }
     }
 
-        pushEvents = (newEvent) => {
-        const newTown = {...this.state.town}
+    pushEvents = (newEvent) => {
+        const newTown = { ...this.state.town }
         newTown.events.unshift(newEvent)
-    
-        this.setState({town: newTown })
+
+        this.setState({ town: newTown })
 
     }
 
@@ -92,16 +108,15 @@ class Town extends Component {
 
     render() {
         return (
-            <div>
-                <h1>THIS IS THE INDIVIDUAL TOWN PAGE</h1>
+            <TownBody>
 
                 <h2>{this.state.town.name} </h2>
 
                 <h4>{this.state.town.description}</h4>
 
-                <h4>{this.state.town.population}</h4>
+                <h4>Population: {this.state.town.population}</h4>
 
-                <h4>{this.state.elevation}</h4>
+                <h4>Elevation: {this.state.elevation}</h4>
 
                 <img src={this.state.town.image} />
 
@@ -115,12 +130,12 @@ class Town extends Component {
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null }
+                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
 
 
 
 
-            </div>
+            </TownBody>
         );
     }
 }
