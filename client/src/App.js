@@ -10,7 +10,6 @@ import SignUpLogIn from "./components/SignUpLogIn"
 import CreateComment from "./components/comment/CreateComment"
 import { clearAuthTokens, saveAuthTokens, setAxiosDefaults, userIsLoggedIn } from "./util/SessionHeaderUtil"
 import IndividualEvent from "./components/event/IndividualEvent"
-import Header from "./components/Header"
 import Footer from "./components/Footer"
 import styled from 'styled-components'
 import { injectGlobal } from 'styled-components'
@@ -23,6 +22,16 @@ injectGlobal`
     background-size: cover;
     background-attachment: fixed;
 }`
+
+const AppBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
+
+const SwitchBody = styled.div`
+  flex: 1 0 auto;
+`
 
 class App extends Component {
   state = {
@@ -108,10 +117,7 @@ class App extends Component {
   }
 
 
-
   render() {
-
-
 
     const SignUpLogInComponent = () => (
       <SignUpLogIn
@@ -123,16 +129,9 @@ class App extends Component {
 
     return (
       <Router>
-        <div>
-          {this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
+        <AppBody>
 
-          <div>
-            <Header />
-            { this.state.signedIn ?
-                <button onClick={this.signOut}>sign out</button>
-                : <button onClick={this.takeToLogin}>Sign In</button>
-            }
-
+          <SwitchBody>
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/towns" component={TownList} />
@@ -140,11 +139,20 @@ class App extends Component {
               <Route exact path="/login" render={SignUpLogInComponent} />
               <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
             </Switch>
+          </SwitchBody>
+          {this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
+
+          <div>
+
+            {this.state.signedIn ?
+              <button onClick={this.signOut}>Sign Out</button>
+              : <button onClick={this.takeToLogin}>Sign In</button>
+            }
 
             <Footer />
 
           </div>
-        </div>
+        </AppBody>
       </Router>
     );
   }
