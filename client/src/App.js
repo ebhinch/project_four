@@ -12,7 +12,17 @@ import { clearAuthTokens, saveAuthTokens, setAxiosDefaults, userIsLoggedIn } fro
 import IndividualEvent from "./components/event/IndividualEvent"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import styled from 'styled-components'
+import { injectGlobal } from 'styled-components'
+import background from './telluride_background.jpg'
 
+injectGlobal`
+  body {
+    background-image: url(${background});
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}`
 
 class App extends Component {
   state = {
@@ -132,7 +142,7 @@ class App extends Component {
             </Switch>
 
             <Footer />
-            
+
           </div>
         </div>
       </Router>
