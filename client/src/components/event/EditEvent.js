@@ -34,7 +34,7 @@ class EditEvent extends Component {
         })
         console.log(response)
         this.props.pushEventEdits(response.data)
-   
+
     }
 
     render() {
@@ -54,7 +54,7 @@ class EditEvent extends Component {
                     </div>
 
                     <div>
-                        <label htmlFor="date">Name: </label>
+                        <label htmlFor="date">Date: </label>
                         <input onChange={this.handleChange}
                             name="date"
                             type="text"
