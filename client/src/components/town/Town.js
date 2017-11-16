@@ -6,7 +6,7 @@ import CreateEvent from "../event/CreateEvent"
 import EventTextIntro from "./EventTextIntro"
 import SubmitNewEventText from "../event/SubmitNewEventText"
 import styled from 'styled-components'
-import Number from "../Number"
+import NumberWithCommas from "../NumberWithCommas"
 
 
 const TownBody = styled.div`
@@ -142,7 +142,7 @@ class Town extends Component {
                 <h2>{this.state.town.name} </h2>
 
                 <h4>{this.state.town.description}</h4>
-                <Number number={this.state.town.population} />
+                <NumberWithCommas number={this.state.town.population} />
 
                 <h4>Population: {this.state.town.population}</h4>
 

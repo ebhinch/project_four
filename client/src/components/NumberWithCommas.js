@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Number = (props) => {
+const NumberWithCommas = (props) => {
 
     const numberWithCommas = (x = '') => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -13,7 +13,7 @@ const Number = (props) => {
     );
 };
 
-export default Number;
+export default NumberWithCommas;
 
 
 
