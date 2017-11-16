@@ -11,7 +11,10 @@ import NumberWithCommas from "../NumberWithCommas"
 const TownContainer = styled.div`
     display: flex;
     flex-direction: row;
-    align-item: space-around;
+    justify-content: center;
+    align-items: center;
+  
+    
 `
 
 const ShadowDiv = styled.div`
@@ -35,17 +38,17 @@ const ShadowDiv = styled.div`
 `
 
 const TownBody = styled.div`
- 
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     button {
         border-radius: 3px;
         padding: 0.25em 1em;
         background: transparent;
         font-family: 'Alegreya Sans SC', sans-serif;
-        font-size: 14px;
+        font-size: 14px;    
         align-items: center;
-        justify-content: center;
-        text-align: center;
+        text-align: center;        
     };
 
     button:hover {
@@ -58,6 +61,10 @@ const TownBody = styled.div`
         height: 300px;
     }
 
+  `
+
+  const Buttons = styled.div`
+    display: flex;
   `
 
 
@@ -166,6 +173,7 @@ class Town extends Component {
                 <ShadowDiv>
                 <EventTextIntro town={this.state.town} />
                 </ShadowDiv>
+                <Buttons>
                 <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
                 {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
@@ -173,7 +181,7 @@ class Town extends Component {
                 <button onClick={this.toggleShowSF}>Summer | Fall </button>
 
                 {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
-
+                </Buttons>
                 <SubmitNewEventText town={this.state.town} />
 
                 <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
