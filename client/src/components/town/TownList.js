@@ -12,16 +12,24 @@ const TownContainer = styled.div`
 `
 
 const TownCard = styled.div`
-    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: 'Alegreya Sans SC', sans-serif;
-    padding: 10px;
+    padding: 20px;
     height: 30vh;
     margin: 2px;
-    img {
+    background-color: white;
+    min-width: 150px;
+`
+
+const TownContainer = styled.div`
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    @media only screen and (max-width: 599px) {
+        flex-direction: column;
         width: 100%;
-        height: 80%;
-        opacity: .8;
     }
 `
 

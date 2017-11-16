@@ -18,11 +18,25 @@ const TownContainer = styled.div`
 `
 
 const ShadowDiv = styled.div`
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #e3f2fd;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+width: 300px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: #e3f2fd;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 5px;
+margin-right: 5px;
+padding: 10px;
+height: 30vh;
+display: row;
+@media only screen and (max-width: 599px) {
+    width: 100%;
+    flex-direction: column
+    }
+`
+
+
+
+const TownBody = styled.div`
     h2 {
         font-size: 2em;
         font-family: 'Alegreya Sans SC', sans-serif;
@@ -185,7 +199,7 @@ class Town extends Component {
                     </Buttons>
                     <SubmitNewEventText town={this.state.town} />
 
-                    <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
+                    <button onClick={this.toggleShowCreate}>Add to  {this.state.town.name}'s  happenings</button>
 
                     <div>
                         {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
