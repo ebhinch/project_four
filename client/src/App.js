@@ -11,6 +11,7 @@ import CreateComment from "./components/comment/CreateComment"
 import { clearAuthTokens, saveAuthTokens, setAxiosDefaults, userIsLoggedIn } from "./util/SessionHeaderUtil"
 import IndividualEvent from "./components/event/IndividualEvent"
 import Footer from "./components/Footer"
+import Header from "./components/Header"
 import styled from 'styled-components'
 import { injectGlobal } from 'styled-components'
 import background from './telluride_background.jpg'
@@ -149,6 +150,9 @@ class App extends Component {
     return (
       <Router>
         <AppBody>
+          <div>
+            <Header />
+          </div>
           {this.state.signedIn ?
             <HeaderButton onClick={this.signOut}>Sign Out</HeaderButton>
             : <HeaderButton onClick={this.takeToLogin}>Sign In</HeaderButton>
@@ -165,10 +169,7 @@ class App extends Component {
           {this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
 
           <div>
-
-
             <Footer />
-
           </div>
         </AppBody>
       </Router>
