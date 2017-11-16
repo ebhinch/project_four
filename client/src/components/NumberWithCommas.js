@@ -1,4 +1,11 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const StyledNumberWithCommas = styled.h4`
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    
+`
 
 const NumberWithCommas = (props) => {
 
@@ -7,9 +14,9 @@ const NumberWithCommas = (props) => {
     }
 
     return (
-        <div>
+        <StyledNumberWithCommas>
            {numberWithCommas(props.number)}
-        </div>
+        </StyledNumberWithCommas>
     );
 };
 
