@@ -132,6 +132,7 @@ class Town extends Component {
 
 
 
+
     render() {
         return (
             <TownBody>
@@ -142,9 +143,6 @@ class Town extends Component {
                 
                 <h4>Population: </h4>
                 <NumberWithCommas number={this.state.town.population} />
-
-
-                {/* <h4>Elevation: {this.state.elevation}</h4> */}
                 
                 <h4>Elevation: </h4>
                 <NumberWithCommas number={this.state.elevation} />
@@ -165,7 +163,9 @@ class Town extends Component {
 
                 <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
 
-                {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
+                <div>
+                    {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
+                </div>
 
 
 

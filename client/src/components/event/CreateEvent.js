@@ -11,6 +11,11 @@ class CreateEvent extends Component {
             image: ""
         }
     }
+
+    componentDidMount(){
+        const addForm = document.getElementById("createForm")
+        addForm.scrollIntoView(true)
+    }
     
     handleChange = (event) => {
         const attribute = event.target.name
@@ -37,8 +42,7 @@ class CreateEvent extends Component {
 
     render() {
         return (
-            <div>
-                <h1>THIS IS THE CREATE EVENT COMPONENT</h1>
+            <div id="createForm">
 
                 <form onSubmit={this.handleSubmit}>
 
