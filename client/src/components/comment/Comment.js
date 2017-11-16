@@ -11,6 +11,15 @@ const ShadowDiv = styled.div`
     margin-bottom: 10px;
     padding: 10px;
     height: 30vh;
+    display: row;
+    @media only screen and (max-width: 599px) {
+        width: 100%;
+        flex-direction: column;
+        background-color: orange;
+    }
+
+ 
+
 `
 
 
