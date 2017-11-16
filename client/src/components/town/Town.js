@@ -179,7 +179,7 @@ class Town extends Component {
 
                 <SubmitNewEventText town={this.state.town} />
 
-                <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
+                <button onClick={this.toggleShowCreate}>Add to  {this.state.town.name}'s  happenings</button>
 
                 <div>
                     {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}
