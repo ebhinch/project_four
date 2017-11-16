@@ -4,19 +4,32 @@ import axios from "axios"
 import Town from "./Town";
 import styled from "styled-components"
 
-const TownContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-`
+// const TownContainer = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// `
 
 const TownCard = styled.div`
-    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    padding: 10px;
+    padding: 20px;
     height: 30vh;
     margin: 2px;
+    background-color: white;
+    min-width: 150px;
+`
+
+const TownContainer = styled.div`
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    @media only screen and (max-width: 599px) {
+        flex-direction: column;
+        width: 100%;
+    }
 `
 
 

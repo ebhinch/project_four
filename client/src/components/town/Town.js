@@ -9,14 +9,23 @@ import styled from 'styled-components'
 import NumberWithCommas from "../NumberWithCommas"
 
 const ShadowDiv = styled.div`
-    width: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #e3f2fd;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    height: 30vh;
+width: 300px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: #e3f2fd;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 5px;
+margin-right: 5px;
+padding: 10px;
+height: 30vh;
+display: row;
+@media only screen and (max-width: 599px) {
+    width: 100%;
+    flex-direction: column
+    }
 `
+
+
 
 const TownBody = styled.div`
     h2 {
