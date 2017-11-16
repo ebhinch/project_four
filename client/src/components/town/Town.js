@@ -56,7 +56,7 @@ const TownBody = styled.div`
     }
   `
 
-    
+
 
 
 
@@ -146,17 +146,17 @@ class Town extends Component {
         return (
             <TownBody>
 
+                <img src={this.state.town.image} />
+
                 <h2>{this.state.town.name} </h2>
 
                 <h4>{this.state.town.description}</h4>
-                
+
                 <h4>Population: </h4>
                 <NumberWithCommas number={this.state.town.population} />
-                
+
                 <h4>Elevation: </h4>
                 <NumberWithCommas number={this.state.elevation} />
-
-                <img src={this.state.town.image} />
 
                 <EventTextIntro town={this.state.town} />
 
