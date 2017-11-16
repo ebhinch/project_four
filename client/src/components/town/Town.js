@@ -6,6 +6,7 @@ import CreateEvent from "../event/CreateEvent"
 import EventTextIntro from "./EventTextIntro"
 import SubmitNewEventText from "../event/SubmitNewEventText"
 import styled from 'styled-components'
+import Number from "../Number"
 
 
 const TownBody = styled.div`
@@ -76,8 +77,6 @@ class Town extends Component {
         }
     }
 
-    // localhost:3001/api/towns/18/elevationapi/?lat=38.7391536&lng=-114.9847034
-
     getElevation = async () => {
         try {
             const { id } = this.props.match.params
@@ -143,11 +142,12 @@ class Town extends Component {
                 <h2>{this.state.town.name} </h2>
 
                 <h4>{this.state.town.description}</h4>
+                <Number number={this.state.town.population} />
 
                 <h4>Population: {this.state.town.population}</h4>
 
                 <h4>Elevation: {this.state.elevation}</h4>
-
+                
                 <img src={this.state.town.image} />
 
                 <EventTextIntro town={this.state.town} />
