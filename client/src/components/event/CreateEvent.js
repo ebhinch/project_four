@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import CommentSignInAlert from "../comment/CommentSignInAlert"
+import styled from "styled-components"
+
+const CreateEventStyling = styled.div`
+    font-family: 'Roboto', sans-serif;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #e3f2fd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 12px;
+`
 
 
 
@@ -46,7 +57,7 @@ class CreateEvent extends Component {
     render() {
         return (
        
-            <div id="createForm">
+            <CreateEventStyling id="createForm">
 
                 <form onSubmit={this.handleSubmit}>
 
@@ -96,7 +107,7 @@ class CreateEvent extends Component {
 
 
 
-            </div>
+            </CreateEventStyling>
         );
     }
 }
