@@ -9,7 +9,7 @@ const Comment = (props) => {
         <div>
             <h3>{props.title}</h3>
             <h5>{props.text}</h5>
-            <moment></moment>
+       
             Posted: {moment(props.created_at).fromNow()}
 
         </div>
