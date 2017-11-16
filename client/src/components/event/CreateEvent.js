@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import axios from "axios"
+import axios from "axios";
+import CommentSignInAlert from "../comment/CommentSignInAlert"
+
 
 
 class CreateEvent extends Component {
@@ -39,9 +41,11 @@ class CreateEvent extends Component {
     }
 
 
+  
 
     render() {
         return (
+       
             <div id="createForm">
 
                 <form onSubmit={this.handleSubmit}>
