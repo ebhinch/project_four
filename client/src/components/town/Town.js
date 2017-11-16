@@ -8,6 +8,15 @@ import SubmitNewEventText from "../event/SubmitNewEventText"
 import styled from 'styled-components'
 import NumberWithCommas from "../NumberWithCommas"
 
+const ShadowDiv = styled.div`
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #e3f2fd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 30vh;
+`
 
 const TownBody = styled.div`
     h2 {

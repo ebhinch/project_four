@@ -7,6 +7,7 @@ const StyledHeader = styled.div`
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    height: 10%;
 `
 
 const HeaderItem = styled.div`
