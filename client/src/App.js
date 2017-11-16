@@ -29,7 +29,7 @@ const AppBody = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   button:hover {
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);

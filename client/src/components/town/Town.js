@@ -8,17 +8,18 @@ import SubmitNewEventText from "../event/SubmitNewEventText"
 import styled from 'styled-components'
 import NumberWithCommas from "../NumberWithCommas"
 
+const TownContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-item: space-around;
+`
+
 const ShadowDiv = styled.div`
-    width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #e3f2fd;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    height: 30vh;
-`
-
-const TownBody = styled.div`
     h2 {
         font-size: 2em;
         font-family: 'Alegreya Sans SC', sans-serif;
@@ -29,14 +30,22 @@ const TownBody = styled.div`
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
     };
+    
+
+`
+
+const TownBody = styled.div`
+ 
 
     button {
         border-radius: 3px;
         padding: 0.25em 1em;
-        margin-right: 5%;
         background: transparent;
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     };
 
     button:hover {
@@ -45,15 +54,10 @@ const TownBody = styled.div`
     };
     img {
         width: 100%;
-        background-size: cover;
-        background-position: center;
+        margin: 0 auto;
         height: 300px;
-        background-repeat: no-repeat;
-        padding-top: 0px;
-        margin-top: 15px;
-        margin-right: 0px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
   `
 
 
@@ -144,10 +148,11 @@ class Town extends Component {
 
     render() {
         return (
+            <TownContainer>
             <TownBody>
 
                 <img src={this.state.town.image} />
-
+                <ShadowDiv>
                 <h2>{this.state.town.name} </h2>
 
                 <h4>{this.state.town.description}</h4>
@@ -157,9 +162,10 @@ class Town extends Component {
 
                 <h4>Elevation: </h4>
                 <NumberWithCommas number={this.state.elevation} />
-
+                </ShadowDiv>
+                <ShadowDiv>
                 <EventTextIntro town={this.state.town} />
-
+                </ShadowDiv>
                 <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
                 {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
@@ -180,6 +186,7 @@ class Town extends Component {
 
 
             </TownBody>
+            </TownContainer>
         );
     }
 }

@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 `
 
 const HeaderItem = styled.div`
-width: 100vw;
+width: 100%;
 font-family: 'Alegreya Sans SC', sans-serif;
 margin: 0px;
 padding-bottom: 10px;
