@@ -36,7 +36,6 @@ class CreateComment extends Component {
     render() {
         return (
             <div>
-                <h1>THIS IS THE CREATE COMMENT COMPONENT</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input onChange={this.handleChange} type="text" name="title" value={this.state.newComment.title} placeholder="Comment Title" />

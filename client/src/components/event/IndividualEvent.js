@@ -4,6 +4,7 @@ import CommentList from "../comment/CommentList"
 import { Link } from 'react-router-dom'
 import EditEvent from "./EditEvent"
 import CreateComment from "../comment/CreateComment"
+import CommentSignInAlert from "../comment/CommentSignInAlert"
 
 
 class IndividualEvent extends Component {
@@ -68,11 +69,16 @@ class IndividualEvent extends Component {
 
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
 
-                <button onClick={this.toggleShowCommentForm}>Add a Comment</button>
+
+                {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
+
+                {/* <button onClick={this.toggleShowCommentForm}>Add a Comment</button> */}
 
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
+
+    
 
                 {this.state.addComment ? <CreateComment event={this.state.event} toggleShowCommentForm={this.toggleShowCommentForm} pushComment={this.pushComment} eventId={this.props.match.params.eventId} townId={this.props.match.params.townId} /> : null}
 

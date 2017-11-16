@@ -10,6 +10,7 @@ import SignUpLogIn from "./components/SignUpLogIn"
 import CreateComment from "./components/comment/CreateComment"
 import { clearAuthTokens, saveAuthTokens, setAxiosDefaults, userIsLoggedIn } from "./util/SessionHeaderUtil"
 import IndividualEvent from "./components/event/IndividualEvent"
+import CommentInBetween from "./components/comment/CommentInBetween"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import styled from 'styled-components'
@@ -143,8 +144,13 @@ class App extends Component {
       <SignUpLogIn
         signUp={this.signUp}
         signIn={this.signIn}
-        signedIn={this.signedIn}
       />)
+
+      const IndividualEventComponent = (props) => (
+        <IndividualEvent signedIn={this.state.signedIn} {...props}/>
+      )
+
+    
 
 
     return (
@@ -163,7 +169,7 @@ class App extends Component {
               <Route exact path="/towns" component={TownList} />
               <Route exact path="/towns/:id" component={Town} />
               <Route exact path="/login" render={SignUpLogInComponent} />
-              <Route exact path="/towns/:townId/events/:eventId" component={IndividualEvent} />
+              <Route exact path="/towns/:townId/events/:eventId" render={IndividualEventComponent} />
             </Switch>
           </SwitchBody>
           {this.state.redirectToSignIn ? (<Redirect to="/login" />) : null}
