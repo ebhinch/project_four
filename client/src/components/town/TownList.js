@@ -4,13 +4,6 @@ import axios from "axios"
 import Town from "./Town";
 import styled from "styled-components"
 
-const TownContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 10px;
-`
-
 const TownCard = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
@@ -24,6 +17,7 @@ const TownContainer = styled.div`
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: auto;
     padding-left: 5px;
     padding-right: 5px;
@@ -32,7 +26,6 @@ const TownContainer = styled.div`
         width: 100%;
     }
 `
-
 
 class TownList extends Component {
     state = {
@@ -48,8 +41,6 @@ class TownList extends Component {
         this.setState({towns: response.data})
         console.log(response.data)
     }
-
-
 
     render() {
         return (

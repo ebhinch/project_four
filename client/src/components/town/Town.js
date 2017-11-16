@@ -13,8 +13,6 @@ const TownContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
-    
 `
 
 const ShadowDiv = styled.div`
@@ -32,23 +30,6 @@ display: row;
     width: 100%;
     flex-direction: column
     }
-`
-
-
-
-const TownBody = styled.div`
-    h2 {
-        font-size: 2em;
-        font-family: 'Alegreya Sans SC', sans-serif;
-        
-    };
-    
-    h4 {
-        font-size: 14px;
-        font-family: 'Roboto', sans-serif;
-    };
-    
-
 `
 
 const TownBody = styled.div`
