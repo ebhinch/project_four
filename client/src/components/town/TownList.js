@@ -8,15 +8,21 @@ const TownContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
 `
 
 const TownCard = styled.div`
     width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    font-family: 'Alegreya Sans SC', sans-serif;
     padding: 10px;
     height: 30vh;
     margin: 2px;
+    img {
+        width: 100%;
+        height: 80%;
+        opacity: .8;
+    }
 `
 
 
@@ -43,6 +49,7 @@ class TownList extends Component {
             
                 {this.state.towns.map((town) => {
                     return (<TownCard>
+                        <img src={town.image} />
                         <Link to={`/towns/${town.id}`}>{town.name}</Link>
           
                     </TownCard>
