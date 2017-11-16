@@ -30,6 +30,8 @@ const FormText = styled.div`
         padding: 0.25em 1em;
         background: transparent;
         font-family: 'Alegreya Sans SC', sans-serif;
+        margin-left: 3px;
+        margin-right: 3px;
          
         align-items: center;
         text-align: center;        
