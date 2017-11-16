@@ -9,14 +9,15 @@ const ShadowDiv = styled.div`
     background-color: #e3f2fd;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 10px;
     height: 30vh;
     display: row;
     @media only screen and (max-width: 599px) {
         width: 100%;
-        flex-direction: column;
-        background-color: orange;
-    }
+        flex-direction: column
+        }
 
  
 
@@ -29,7 +30,7 @@ const Comment = (props) => {
         <ShadowDiv>
             <h3>{props.title}</h3>
             <h5>{props.text}</h5>
-       
+
             Posted: {moment(props.created_at).fromNow()}
 
         </ShadowDiv>
