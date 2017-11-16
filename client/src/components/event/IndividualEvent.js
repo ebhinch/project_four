@@ -5,6 +5,27 @@ import { Link } from 'react-router-dom'
 import EditEvent from "./EditEvent"
 import CreateComment from "../comment/CreateComment"
 import CommentSignInAlert from "../comment/CommentSignInAlert"
+import styled from 'styled-components'
+
+
+const EventButton = styled.button`
+    margin-left: 5px; 
+    border-radius: 2px;
+    margin-right: 5%;
+    margin-top: 3%;
+    background: semi-transparent;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 10px;
+`
+
+const IndividualEventDiv = styled.div`
+    font-family: 'Roboto', sans-serif;  
+`
+
+const IndividualEventBackground = styled.div`
+  
+`
+
 
 
 class IndividualEvent extends Component {
@@ -61,18 +82,18 @@ class IndividualEvent extends Component {
 
     render() {
         return (
-            <div>
-                <h1>THIS IS THE INDIVIDUAL EVENT COMPONENT</h1>
+            <IndividualEventDiv>
                 <h2>{this.state.event.name}</h2>
 
                 <h4>{this.state.event.date}</h4>
 
-                <button onClick={this.toggleEditEvent}>Edit Event</button>
+                <EventButton onClick={this.toggleEditEvent}>Edit Event</EventButton>
 
 
                 {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
 
                 {/* <button onClick={this.toggleShowCommentForm}>Add a Comment</button> */}
+                <EventButton onClick={this.toggleShowCommentForm}>Add a Comment</EventButton>
 
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
 
@@ -82,7 +103,7 @@ class IndividualEvent extends Component {
 
                 {this.state.addComment ? <CreateComment event={this.state.event} toggleShowCommentForm={this.toggleShowCommentForm} pushComment={this.pushComment} eventId={this.props.match.params.eventId} townId={this.props.match.params.townId} /> : null}
 
-            </div>
+            </IndividualEventDiv>
         );
     }
 }

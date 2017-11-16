@@ -1,10 +1,15 @@
 import React from 'react';
 import Comment from "./Comment"
+import styled from "styled-components"
+
+const CommentContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+`
 
 const CommentList = (props) => {
     return (
-        <div>
-            <h1>THIS IS THE COMMENT LIST COMPONENT</h1>
+        <CommentContainer>
             {props.comments.map((comment) => {
                 return (
                     <div>
@@ -13,9 +18,9 @@ const CommentList = (props) => {
                     </div>
                 )
             })}
- 
 
-        </div>
+
+        </CommentContainer>
     );
 };
 
