@@ -13,8 +13,13 @@ const TownContainer = styled.div`
         color: navy
     };
     a {
-        color: #800D57
+        color: #800D57;
+        text-decoration: none;
+        font-size: 18px;
     };
+    a:hover {
+        font-weight: bold;
+    }
     @media only screen and (max-width: 599px) {
         flex-direction: column;
         width: 100%;

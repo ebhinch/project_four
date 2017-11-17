@@ -9,7 +9,7 @@ const EventListDiv = styled.div`
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 18px;
         color: #800D57;
-
+        text-decoration: none;
     };
     @media only screen and (max-width: 599px) {
         width: 100%;

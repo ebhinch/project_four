@@ -28,7 +28,8 @@ const FooterItem = styled.div`
         font-size: 18px;
     };
     a {
-        color: #800D57
+        color: #800D57;
+        text-decoration: none;
     };
     a:hover {
         font-size: 14px;
