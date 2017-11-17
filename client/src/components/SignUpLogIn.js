@@ -14,9 +14,6 @@ const FormContainer = styled.div`
     margin-right: 15%;
     padding-top: 7%;
     padding-left: 10%;
-    height: 30vh;
- 
- 
 `
 
 const FormText = styled.div`
@@ -39,9 +36,10 @@ const FormText = styled.div`
     div {
         margin-top: 3px;
         margin-bottom: 3px;
+    };
+    h6 {
+        color: navy;
     }
-   
-
 `
 
 class SignUpLogIn extends Component {
@@ -112,6 +110,7 @@ class SignUpLogIn extends Component {
                             </div>
                             <button onClick={this.signIn}>Log In</button>
                             <button onClick={this.signUp}>Sign Up</button>
+                            <h6>If creating new account, please note passwords must be at least six characters in length.</h6>
 
                         </form>
 
