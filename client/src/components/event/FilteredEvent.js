@@ -28,8 +28,7 @@ const FilteredEvent = (props) => {
 
             <p>{props.event.date}</p>
 
-            
-
+        
             <button onClick={() => props.deleteEvent(props.event.id)}>Delete Event</button>
 
         </EventListDiv>

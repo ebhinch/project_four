@@ -31,6 +31,10 @@ const IndividualEventDiv = styled.div`
         margin-bottom: 2px;
         font-weight: bold;
     };
+    img {
+        height: 300px;
+        width: 100%;
+    }
 `
 
 
@@ -90,6 +94,7 @@ class IndividualEvent extends Component {
             <IndividualEventDiv>
                 <h2>{this.state.event.name}</h2>
                 <h4>{this.state.event.date}</h4>
+                <img src={this.state.event.image} />
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
 
                 <h2>Comments: </h2>

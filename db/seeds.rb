@@ -12,7 +12,7 @@ telluride = Town.create({
     lng: 107.8123,
     description: "Telluride, a former Victorian mining town in Colorado’s Rocky Mountains, is set in a box canyon amid forested peaks at the base of a popular ski-and-golf resort. The town’s historic district houses landmarks like the Sheridan Opera House, a performing-arts venue originally built in 1913, and the Telluride Historical Museum, which showcases local history in a converted hospital built in 1896.",
     population: 2444,
-    image: "http://www.momsformomscommunities.com/wp-content/uploads/2011/05/telluride-town-center.jpg"
+    image: "http://www.madelinetelluride.com/img/images/index-itinerary-2.jpg"
 })
 
 taos = Town.create({
@@ -42,10 +42,56 @@ ogden = Town.create({
     image: "https://media.deseretdigital.com/file/001f088444?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0"
 })
 
+breckenridge = Town.create({
+    name: "Breckenridge, Colorado",
+    lat: 39.4817,
+    lng:106.0384,
+    description: "Breckenridge has a mountain that speaks for itself with a town to match. As the largest historic district in Colorado, the town is framed by colorful Victorian architecture and defined by the spirit of its locals. Lined with coffee shops, locally owned shops and eateries, Breck's downtown also features the state's most unique arts district.",
+    population: 4896,
+    image: "http://www.gobreck.com/sites/default/files/PANO-1_2_4_fused.jpg"
+})
+
+vail = Town.create({
+    name: "Vail, Colorado",
+    lat: 39.6403,
+    lng: 106.3742,
+    description: "Vail is possibly the mountain town of your dreams. It’s located at the base of Vail Mountain, which is home to world renowned Vail Ski Resort. Vail sits within White River National Forest and every time you look around you, your mind is going to be blown! It’s a go-to travel spot for lovers of the outdoors, no matter the season! It’s a winter sport lover’s dream, a summer time spot for hiking, golfing, and festivals, and the autumn colors are postcard worthy. What are you waiting for?",
+    population: 5483,
+    image: "http://drvail.dhr.sabredemos.com/images/masthead/masthead-home.jpg"
+})
+
+ouray = Town.create({
+    name: "Ouray, Colorado",
+    lat: 38.0228,
+    lng: 107.6714,
+    description: "Ouray has a no-fancy-pants-needed vibe that’s lacking in other Colorado resort towns. The Victorian-era Main Street is a National Historic District lined with restored storefronts. Mandatory stops include Bloom, for boho-chic gifts and decorations, and Mouses Chocolates & Coffee. Looming above, the cliff-like peaks from the San Juan range surround the town on three sides and harbor the best winter ice climbing routes in the country.",
+    population: 1033,
+    image: "https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1470323829%2Fouray-MOUNT0716.jpg%3Fitok%3Dq1ozsE8g&w=1400&q=70"
+})
+
+durango = Town.create({
+    name: "Durango, Colorado",
+    lat: 37.2753,
+    lng:107.8801,
+    description: "Durango is basically Colorado’s year round playground. You will always find something to do in this majestic mountain town. The surrounding landscape is diverse and dramatic – from red sandstone bluffs of the Animas River Valley to the extreme jagged peaks of the San Juan Mountains. Some of these mountains are 14,000 feet in elevation! Durango is a vacation destination. Some people take the historic Durango and Silverton Narrow Gauge Railroad through the canyons of the San Juan National Forest for spectacular views.  Some come to take advantage of the outdoor activities, and some come for the arts and culture. We think you should come for all of these things. You won’t regret it!",
+    population: 17577,
+    image:"http://www.globaltravelerreview.com/wp-content/uploads/2015/04/durango_colorado_mountains1.jpg"
+})
+
+buffalo = Town.create({
+    name: "Buffalo, Wyoming",
+    lat: 44.3483,
+    lng: 106.6989,
+    description: "Buffalo is nestled in the foothills of the beautiful Big Horn Mountains. It’s located along the Cloud Peak Scenic Highway, which can bring you from Mount Rushmore to Yellowstone National Park. Main street has more than a dozen historical buildings and the town is filled with other historical sites – including the infamous “Hole in the Wall,”  the hideout of Butch Cassidy and the Sundance Kid with the rest of the “Wild Bunch.” Just like all the mountain towns, Buffalo is a great spot to go skiing, camping, hiking, boating, fishing, wildlife viewing, and more.",
+    population: 4638,
+    image: "http://roadslesstraveled.us/blog/wp-content/uploads/2017/08/00-851-Buffalo-Wyoming-River-Runs-Through-It-mural-seen-on-an-RV-trip-to-town.jpg"
+})
+
 trideEventOne = Event.create({
     name: "Telluride Ski Resort Opening Day",
     date: "November 23, 2017",
     season: "ws", 
+    image: "https://www.telluride.com/sites/default/files/styles/banner_slide/public/images/blog/lift.jpg?itok=zroYGOT2",
     town_id: telluride.id
 })
 
@@ -53,6 +99,7 @@ trideEventTwo = Event.create({
     name: "Telluride Ski Resort Closing Day",
     date: "April 8, 2018",
     season: "ws",
+    image: "https://cdn.vox-cdn.com/uploads/chorus_asset/file/6176345/gorrono-ranch-1920x840-hero.jpg",
     town_id: telluride.id
 })
 
@@ -60,6 +107,7 @@ trideEventThree = Event.create({
     name: "Telluride Bluegrass Festival",
     date: "June 21 - 24, 2018",
     season: "sf",
+    image: "http://marqueemag.com/wp-content/uploads/2015/06/IMG_9974-700x336.jpg",
     town_id: telluride.id
 })
 
@@ -67,6 +115,7 @@ trideEventFour = Event.create({
     name: "Telluride Jazz Festival",
     date: "August 3 - 5, 2018",
     season: "sf",
+    image: "https://www.telluride.com/sites/default/files/styles/banner_slide/public/TTD%20Slider%20-%20Jazz%20Fess-3.jpg?itok=BMDP-ywJ",
     town_id: telluride.id
 })
 
@@ -187,6 +236,70 @@ ogdenEventSix = Event.create({
     date: "October 29, 2018",
     season: "sf",
     town_id: ogden.id
+})
+
+breckEventOne = Event.create({
+    name: "Race of the Santas",
+    date: "December 2, 2017",
+    season: "ws",
+    image: "http://www.gobreck.com/sites/default/files/styles/secondary_hero/public/race-of-santas.jpg?itok=yQmlc3m2",
+    town_id: breckenridge.id
+})
+
+breckEventTwo = Event.create({
+    name: "Sledding at Carter Park",
+    date: "Daily",
+    season: "ws", 
+    image: "http://www.gobreck.com/sites/default/files/styles/secondary_hero/public/IMG_7553.JPG?itok=ZPP7zNkF",
+    town_id: breckenridge.id
+})
+
+breckEventThree = Event.create({
+    name: "Breck Summer Beer Festivals",
+    date: "July 9, 2018",
+    season: "sf",
+    image: "http://images.ski.com/media/SMT/breckbeerfest.jpg",
+    town_id: breckenridge.id
+})
+
+breckEventFour = Event.create({
+    name: "BREK EPIC",
+    date: "August 12 - 17, 2018",
+    season: "sf",
+    image: "https://i2.wp.com/breckepic.com/wp-content/uploads/2016/04/EClark_150809_8675.jpg?zoom=2&fit=1200%2C799&ssl=1",
+    town_id: breckenridge.id
+})
+
+vailEventOne = Event.create({
+    name: "Ski Opening Day",
+    date: "November 23, 2017",
+    season: "ws",
+    image: "http://www.henryrealty.com/wp-content/uploads/2012/12/vail_trails.jpg",
+    town_id: vail.id
+})
+
+vailEventTwo = Event.create({
+    name: "Story Time Skating",
+    date: "November 29, 2017",
+    season: "ws",
+    image: "https://cdn.allvail.com/images/content/6361_w4IPF_Beaver_Creek_Ice_Rink_lg.jpg",
+    town_id: vail.id
+})
+
+vailEventThree = Event.create({
+    name: "Vail Arts Festival",
+    date: "June 24 - June 26, 2018",
+    season: "sf",
+    image: "http://freshharvestfoodbank.org/wp-content/uploads/2016/06/vail-arts-festival-8.jpg",
+    town_id: vail.id
+})
+
+vailEventFour = Event.create({
+    name: "Vail Dance Festival",
+    date: "July 28 - August 11, 2018",
+    season: "sf",
+    image: "https://images1.westword.com/imager/u/original/8981884/artists-of-colorado-ballet-in-serenade---photo-by-mike-watson---4.png",
+    town_id: vail.id
 })
 
 erica = User.create({

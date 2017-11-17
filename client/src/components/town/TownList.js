@@ -9,6 +9,9 @@ const TownContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10px;
+    a:visited {
+        color: navy
+    }
 `
 
 const TownCard = styled.div`

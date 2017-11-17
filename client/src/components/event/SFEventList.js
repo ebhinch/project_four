@@ -12,6 +12,9 @@ const EventContainer = styled.div`
         flex-direction: column;
         width: 100%;
     }
+    a:visited {
+        color: navy
+    }
 `
 
 const EventCard = styled.div`
