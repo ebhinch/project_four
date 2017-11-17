@@ -68,10 +68,6 @@ const Buttons = styled.div`
     display: flex;
   `
 
-
-
-
-
 class Town extends Component {
     state = {
         town: {
@@ -177,12 +173,16 @@ class Town extends Component {
                     <Buttons>
                         <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
+                        <button onClick={this.toggleShowSF}>Summer | Fall </button>
+                        </Buttons>
+
                         {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-                        <button onClick={this.toggleShowSF}>Summer | Fall </button>
+        
 
                         {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
-                    </Buttons>
+                      
+                    
                     <SubmitNewEventText town={this.state.town} />
 
                     <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>

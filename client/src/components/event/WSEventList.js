@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import FilteredEvent from "./FilteredEvent"
 
-
-
 class WSEventList extends Component {
     render() {
         const array = this.props.events.filter(event =>
@@ -12,7 +10,6 @@ class WSEventList extends Component {
 
         return (
             <div>
-                <h1>THIS IS THE WS EVENT LIST COMPONENT</h1>
                 {array.map((event) => {
                     return (
 
