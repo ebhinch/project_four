@@ -17,6 +17,11 @@ const IndividualEventDiv = styled.div`
         margin-top: 3px;
         margin-bottom: 3px;
     };
+    h1 {
+        font-size: 28px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        
+    }
     h2 {
        
         font-family: 'Alegreya Sans SC', sans-serif;
