@@ -15,20 +15,24 @@ const IndividualEventDiv = styled.div`
         background: transparent;
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 10px;
+        margin-top: 3px;
+        margin-bottom: 3px;
     };
     h2 {
-        font-size: 2em;
+       
         font-family: 'Alegreya Sans SC', sans-serif;
         margin-bottom: 0;
         
     };
     h4 {
-        font-size: 14px;
-        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-family: 'Alegreya Sans SC', sans-serif;
         margin-top: 0;
         margin-bottom: 2px;
+        font-weight: bold;
     };
 `
+
 
 class IndividualEvent extends Component {
     state = {
@@ -50,7 +54,6 @@ class IndividualEvent extends Component {
             console.log(eventId)
             const response = await axios.get(`/api/towns/${townId}/events/${eventId}`)
             this.setState({ event: response.data })
-            // const commentResponse = await axios.get(`/api`)
         } catch (error) {
             console.log(error)
         }
@@ -88,11 +91,9 @@ class IndividualEvent extends Component {
                 <h2>{this.state.event.name}</h2>
                 <h4>{this.state.event.date}</h4>
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
+
+                <h2>Comments: </h2>
                
-
-                
-
-
                 {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
 
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }

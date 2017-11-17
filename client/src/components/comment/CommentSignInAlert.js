@@ -3,14 +3,14 @@ import styled from 'styled-components'
 
 const AlertDiv = styled.div`
     font-size: 10px;
-    color: red;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #F3FAFF;
-    margin: 5px;
-    padding: 3px;
 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FF5D55;
+    margin-top: 2px;
+    padding: 3px;
+    width: 60%;
     h2 {
-        margin: 0
+        margin: 0;
     }
 `
 
