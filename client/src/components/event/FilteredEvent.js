@@ -3,11 +3,19 @@ import { Link } from "react-router-dom"
 import styled from 'styled-components'
 
 const EventListDiv = styled.div`
-a {
-    font-family: 'Roboto', sans-serif;
-};
-font-family: 'Alegreya Sans SC', sans-serif;
+    a {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        
+        font-size: 18px;
 
+    };
+    font-family: 'Alegreya Sans SC', sans-serif;
+    
+    width: 300px;
+    @media only screen and (max-width: 599px) {
+        width: 100%;
+        flex-direction: column
+        }
 `
 
 

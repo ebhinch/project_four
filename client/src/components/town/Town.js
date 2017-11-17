@@ -174,7 +174,7 @@ class Town extends Component {
                         <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
                         <button onClick={this.toggleShowSF}>Summer | Fall </button>
-                        </Buttons>
+                        </Buttons> 
 
                         {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
