@@ -130,6 +130,7 @@ taosEventOne = Event.create({
     name: "Taos Ski Valley Opening Day",
     date: "November 23, 2017",
     season: "ws",
+    image: "https://static01.nyt.com/images/2008/01/24/travel/escapes/taosspan.600.jpg",
     town_id: taos.id
 })
 
@@ -137,6 +138,7 @@ taosEventTwo = Event.create({
     name: "Taos Ski Valley Closing Day",
     date: "April 1, 2018",
     season: "ws",
+    image: "http://www.skitaos.com/uploaded/header%20photos/HERO_Taos_Events.jpg",
     town_id: taos.id
 })
 
@@ -144,6 +146,7 @@ taosEventThree = Event.create({
     name: "Taos Winter Wine Festival",
     date: "February 2018",
     season: "ws",
+    image: "http://www.bellavitae.com/wp-content/uploads/2012/01/Winter-Wine-Festival.jpg",
     town_id: taos.id
 })
 
@@ -151,6 +154,7 @@ taosEventFour = Event.create({
     name: "Las Fiestas de Taos",
     date: "July 20 - 22, 2018",
     season: "sf",
+    image: "https://www.elmontesagrado.com/sites/elmontesagrado.com/files/website/images/Top-El-Monte-Sagrado-Taos-Explore-Events.jpg",
     town_id: taos.id
 })
 
@@ -158,6 +162,7 @@ taosEventFive = Event.create({
     name: "Summer Full Moon Hike",
     date: "September 6, 2018",
     season: "sf",
+    image: "https://s-media-cache-ak0.pinimg.com/originals/5c/8c/62/5c8c6207937ff32e91c4c988c98cc665.jpg",
     town_id: taos.id
 })
 
@@ -165,6 +170,7 @@ jacksonEventOne = Event.create({
     name: "Jackson Hole Mountain Resort Opens",
     date: "November 25, 2017",
     season: "ws",
+    image: "https://www.jacksonhole.com/images/general/tommy-moe-1200w-20160119_ES.jpg",
     town_id: jackson.id
 })
 
@@ -172,6 +178,7 @@ jacksonEventTwo = Event.create({
     name: "New Year's Eve Torchlight Parades",
     date: "December 31, 2017",
     season: "ws",
+    image: "http://snowbrains.com/wp-content/uploads/2016/12/VailResorts_FIREWORKS-min.jpg",
     town_id: jackson.id
 })
 
@@ -179,6 +186,7 @@ jacksonEventThree = Event.create({
     name: "Closing weekend at Jackson Hole Mountain Resort",
     date: "April 6 - 8, 2017",
     season: "ws",
+    image: "https://www.jacksonhole.com/images/hero/Ski-Groomer-1345x517.jpg",
     town_id: jackson.id
 })
 
@@ -186,6 +194,7 @@ jacksonEventFour = Event.create({
     name: "Wyoming Stargazing at Rendezvous Park",
     date: "Fridays",
     season: "sf",
+    image: "https://www.wyomingstargazing.org/wp-content/uploads/2014/02/header-stargazing.jpg",
     town_id: jackson.id
 })
 
@@ -193,6 +202,7 @@ jacksonEventFive = Event.create({
     name: "Jackson Hole Fall Arts Festival",
     date: "September 6 - 17, 2018",
     season: "sf",
+    image: "http://jacksonhole-traveler-production.s3.amazonaws.com/wp-content/uploads/2014/11/jackson-hole-fall-arts-festival-1280x601.jpg",
     town_id: jackson.id
 })
 
@@ -200,6 +210,7 @@ ogdenEventOne = Event.create({
     name: "Snowbasin Resort Opening Day",
     date: "November 22, 2017",
     season: "ws",
+    image: "https://static.rootsrated.com/image/upload/s--7uWcQyfA--/t_rr_large_natural/hlegjqv9zcjbkf5mrhyn.jpg",
     town_id: ogden.id
 })
 
@@ -207,6 +218,7 @@ ogdenEventTwo = Event.create({
     name: "Nordic Valley Ski Resort Opening Day",
     date: "December 9, 2017",
     season: "ws",
+    image: "https://static.rootsrated.com/image/upload/s--7uWcQyfA--/t_rr_large_natural/hlegjqv9zcjbkf5mrhyn.jpg",
     town_id: ogden.id
 })
 
@@ -214,6 +226,7 @@ ogdenEventThree = Event.create({
     name: "Nordic Valley Ski Resort Closing Day",
     date: "April 7, 2018",
     season: "ws",
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/10/c4/78/9e/snowbasin-resort-in-all.jpg",
     town_id: ogden.id
 })
 
@@ -221,6 +234,7 @@ ogdenEventFour = Event.create({
     name: "Blues, Brews & BBQ Summer Concert Series",
     date: "Sundays - June through September",
     season: "sf",
+    image: "https://www.skiutah.com/blog/authors/yeti/mountain-music-ogden-area/pictures/snowbasin_concert.jpg/hero--xl",
     town_id: ogden.id
 })
 
@@ -228,6 +242,7 @@ ogdenEventFive = Event.create({
     name: "Harvest Moon Celebration",
     date: "September 24, 2018",
     season: "sf",
+    image: "https://coupons4utah.com/wp-content/uploads/2013/09/harvest-moon.jpg",
     town_id: ogden.id
 })
 
@@ -235,6 +250,7 @@ ogdenEventSix = Event.create({
     name: "Witchstock",
     date: "October 29, 2018",
     season: "sf",
+    image: "https://static.wixstatic.com/media/ce0bb1_1f7c14d9530742a6b056378f3fc1f0f8~mv2_d_2048_1366_s_2.jpg/v1/crop/x_0,y_503,w_2048,h_863/fill/w_808,h_343,al_c,q_80,usm_0.66_1.00_0.01/ce0bb1_1f7c14d9530742a6b056378f3fc1f0f8~mv2_d_2048_1366_s_2.webp",
     town_id: ogden.id
 })
 

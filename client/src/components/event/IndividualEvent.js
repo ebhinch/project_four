@@ -13,18 +13,23 @@ const IndividualEventDiv = styled.div`
         border-radius: 2px;
         background: transparent;
         font-family: 'Alegreya Sans SC', sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         margin-top: 3px;
         margin-bottom: 3px;
     };
     h2 {
        
         font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 24px;
         margin-bottom: 0;
         
     };
+    h3 {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        margin-bottom: 10px;
+    }
     h4 {
-        font-size: 16px;
+        font-size: 20px;
         font-family: 'Alegreya Sans SC', sans-serif;
         margin-top: 0;
         margin-bottom: 2px;
@@ -96,7 +101,7 @@ class IndividualEvent extends Component {
                 <img src={this.state.event.image} />
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
 
-                <h2>Comments: </h2>
+                <h3>Comments: </h3>
                
                 {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
 
