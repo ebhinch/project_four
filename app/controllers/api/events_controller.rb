@@ -10,7 +10,7 @@ class Api::EventsController < ApplicationController
         def show
             event_id = params[:id]
             @event = Event.find_by_id(event_id)
-            render json: @event, include: [:comments]
+            render json: @event, include: [:comments, :town]
         end
     
         

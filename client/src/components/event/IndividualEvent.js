@@ -45,6 +45,7 @@ const IndividualEventDiv = styled.div`
 class IndividualEvent extends Component {
     state = {
         event: {
+            town: {},
             comments: []
         },
         editEventDetails: false,
@@ -96,6 +97,7 @@ class IndividualEvent extends Component {
     render() {
         return (
             <IndividualEventDiv>
+                <h1>{this.state.event.town.name}</h1>
                 <h2>{this.state.event.name}</h2>
                 <h4>{this.state.event.date}</h4>
                 <img src={this.state.event.image} />
