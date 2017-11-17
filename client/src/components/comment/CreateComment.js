@@ -38,11 +38,23 @@ class CreateComment extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input onChange={this.handleChange} type="text" name="title" value={this.state.newComment.title} placeholder="Comment Title" />
+                        <input onChange={this.handleChange} 
+                        type="text" 
+                        name="title" 
+                        value={this.state.newComment.title} 
+                        placeholder="Comment Title"
+                        required 
+                        />
                     </div>
 
                     <div>
-                        <textarea onChange={this.handleChange} type="text" name="text" value={this.state.newComment.text} placeholder="Comment Body" />
+                        <textarea onChange={this.handleChange} 
+                        type="text" 
+                        name="text" 
+                        value={this.state.newComment.text} 
+                        placeholder="Comment Body"
+                        required 
+                        />
                     </div>
 
                     <input type="submit" value="Save Comment" />
