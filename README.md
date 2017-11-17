@@ -4,17 +4,17 @@
 ### An app connecting travelers, locals and adventure-seekers of all kinds with everything the Rocky Mountains' small towns have to offer. Peak season skiing, mid-summer hiking and all the festivals in between, ROCK YOUR LIFE's got it all. 
 
 ## User Stories, Wireframes, and ERDs:
-* [User Stories] (https://trello.com/b/fvOmU17h/wdi-final-project)
-* [Wireframes] (https://marvelapp.com/3b4f7fa)
+* [User Stories](https://trello.com/b/fvOmU17h/wdi-final-project)
+* [Wireframes](https://marvelapp.com/3b4f7fa)
 * ERD
 <img src="/images/project_four_erd.png">
 
 ## LINKS TO APP
-* [Deployed to Heroku] (https://desolate-bastion-36051.herokuapp.com/)
-* [GitHub] (https://github.com/ebhinch/project_four/)
+* [Deployed to Heroku](https://desolate-bastion-36051.herokuapp.com/)
+* [GitHub](https://github.com/ebhinch/project_four/)
 
 ## PORTFOLIO SITE LINK
-* [Portfolio] (http://amazing-haibt-8f9b26.bitballoon.com/)
+* [Portfolio](http://amazing-haibt-8f9b26.bitballoon.com/)
 
 ## TECHNOLOGIES USED
 * ROCK YOUR LIFE was built using React on Rails, Axios, PostgreSQL,Devise Token Auth, Foreman, the Google Maps Elevation API, Moment.js, CSS, JavaScript, HTML, Heroku, Google Fonts, FlexBox, media queries, HTTParty, namespacing, Trello, Marvel, draw.io and more. 
