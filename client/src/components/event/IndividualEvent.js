@@ -8,25 +8,27 @@ import CommentSignInAlert from "../comment/CommentSignInAlert"
 import styled from 'styled-components'
 
 
-const EventButton = styled.button`
-    margin-left: 5px; 
-    border-radius: 2px;
-    margin-right: 5%;
-    margin-top: 3%;
-    background: semi-transparent;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 10px;
-`
-
 const IndividualEventDiv = styled.div`
     font-family: 'Roboto', sans-serif;  
+    button {
+        border-radius: 2px;
+        background: transparent;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 10px;
+    };
+    h2 {
+        font-size: 2em;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        margin-bottom: 0;
+        
+    };
+    h4 {
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 0;
+        margin-bottom: 2px;
+    };
 `
-
-const IndividualEventBackground = styled.div`
-  
-`
-
-
 
 class IndividualEvent extends Component {
     state = {
@@ -84,16 +86,14 @@ class IndividualEvent extends Component {
         return (
             <IndividualEventDiv>
                 <h2>{this.state.event.name}</h2>
-
                 <h4>{this.state.event.date}</h4>
+                <button onClick={this.toggleEditEvent}>Edit Event</button>
+               
 
-                <EventButton onClick={this.toggleEditEvent}>Edit Event</EventButton>
+                
 
 
                 {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
-
-                {/* <button onClick={this.toggleShowCommentForm}>Add a Comment</button> */}
-                <EventButton onClick={this.toggleShowCommentForm}>Add a Comment</EventButton>
 
                 {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
 
