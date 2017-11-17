@@ -25,12 +25,15 @@ ul {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 12px;
-}
-a:visited {
-    color: rgb(17, 17, 114);
-}
+};
+a {
+    color: #800D57
+};
 a:hover {
     font-size: 14px;
+};
+a:visited {
+    color: navy
 }
 `
 

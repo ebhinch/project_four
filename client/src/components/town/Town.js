@@ -167,9 +167,11 @@ class Town extends Component {
                         <h4>Elevation: </h4>
                         <NumberWithCommas number={this.state.elevation} />
                     </ShadowDiv>
+
                     <ShadowDiv>
                         <EventTextIntro town={this.state.town} />
                     </ShadowDiv>
+                    
                     <Buttons>
                         <button onClick={this.toggleShowWS}>Winter | Spring</button>
 

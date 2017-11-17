@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios"
 import CommentList from "../comment/CommentList"
-import { Link } from 'react-router-dom'
 import EditEvent from "./EditEvent"
 import CreateComment from "../comment/CreateComment"
 import CommentSignInAlert from "../comment/CommentSignInAlert"

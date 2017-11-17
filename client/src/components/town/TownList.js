@@ -11,7 +11,10 @@ const TownContainer = styled.div`
     margin-top: 10px;
     a:visited {
         color: navy
-    }
+    };
+    a {
+        color: #800D57
+    };
 `
 
 const TownCard = styled.div`
