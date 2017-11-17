@@ -21,7 +21,7 @@ taos = Town.create({
     lng: 105.5731,
     description: "Taos is a town in northern New Mexico’s high desert, bounded by the Sangre de Cristo Mountains. It’s known for historic adobe buildings such as Taos Pueblo, a multistory adobe complex inhabited by Native Americans for centuries. A longtime artist colony, Taos also offers many galleries and museums showcasing regional artwork, including the Harwood Museum of Art and the Taos Art Museum.",
     population: 5736,
-    image: "http://adventure.nationalgeographic.com/2009/10/adventure-towns/img/taos-ms-450.jpg"
+    image: "http://www.mountainyahoos.com/SkiResorts/Taos-NM/StBernards_DSC03649_DSC03654-6-images_980x463.jpg"
 })
 
 jackson = Town.create({
