@@ -6,7 +6,7 @@ import styled from "styled-components"
 const EventContainer = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    height: auto;
     margin-top: 10px;
     @media only screen and (max-width: 599px) {
         flex-direction: column;

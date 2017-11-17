@@ -4,7 +4,8 @@ import 'moment-timezone';
 import styled from 'styled-components'
 
 const ShadowDiv = styled.div`
-    width: 300px;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #F3FAFF;
     margin-top: 10px;
@@ -12,15 +13,8 @@ const ShadowDiv = styled.div`
     margin-left: 5px;
     margin-right: 5px;
     padding: 10px;
-    height: 30vh;
-    display: row;
-    @media only screen and (max-width: 599px) {
-        width: 100%;
-        flex-direction: column
-        }
-
- 
-
+    min-height: 250px;
+    min-width: 38%;
 `
 
 
