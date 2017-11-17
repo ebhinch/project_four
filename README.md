@@ -14,7 +14,7 @@
 * [GitHub] (https://github.com/ebhinch/project_four/)
 
 ## PORTFOLIO SITE LINK
-* [Portfolio] (http://scheduler-hare-37153.bitballoon.com/)
+* [Portfolio] (http://amazing-haibt-8f9b26.bitballoon.com/)
 
 ## TECHNOLOGIES USED
 * ROCK YOUR LIFE was built using React on Rails, Axios, PostgreSQL,Devise Token Auth, Foreman, the Google Maps Elevation API, Moment.js, CSS, JavaScript, HTML, Heroku, Google Fonts, FlexBox, media queries, HTTParty, namespacing, Trello, Marvel, draw.io and more. 
