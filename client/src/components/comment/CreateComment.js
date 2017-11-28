@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 import axios from "axios"
+import styled from "styled-components"
+
+const CommentDiv = styled.div`
+    margin-top: 10px;
+    margin-bottom: 10px;
+    textarea, input {
+        width: 40%;
+    }
+`
+
+const CommentContainer = styled.div`
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: transparent;
+    padding: 10px;
+`
+
 
 class CreateComment extends Component {
     state = {
@@ -35,9 +52,10 @@ class CreateComment extends Component {
 
     render() {
         return (
-            <div>
+            <CommentContainer>
+                <h4>Please enter a new comment below: </h4>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <CommentDiv>
                         <input onChange={this.handleChange} 
                         type="text" 
                         name="title" 
@@ -45,9 +63,9 @@ class CreateComment extends Component {
                         placeholder="Comment Title"
                         required 
                         />
-                    </div>
+                    </CommentDiv>
 
-                    <div>
+                    <CommentDiv>
                         <textarea onChange={this.handleChange} 
                         type="text" 
                         name="text" 
@@ -55,12 +73,12 @@ class CreateComment extends Component {
                         placeholder="Comment Body"
                         required 
                         />
-                    </div>
+                    </CommentDiv>
 
                     <input type="submit" value="Save Comment" />
 
                 </form>
-            </div>
+            </CommentContainer>
         );
     }
 }
