@@ -10,7 +10,7 @@
 <img src="/images/project_four_erd.png">
 
 ## LINKS TO APP
-* [Deployed to Heroku](https://desolate-bastion-36051.herokuapp.com/)
+* [Deployed to Heroku](https://rockyourlife.herokuapp.com/)
 * [GitHub](https://github.com/ebhinch/project_four/)
 
 ## PORTFOLIO SITE LINK
