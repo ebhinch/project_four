@@ -9,8 +9,18 @@ const CreateEventStyling = styled.div`
     background-color: #F3FAFF;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
     font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    label {
+        font-weight: bold;
+    }
+`
+
+const FormDiv = styled.div`
+    margin: 5px;
 `
 
 
@@ -61,16 +71,16 @@ class CreateEvent extends Component {
 
                 <form onSubmit={this.handleSubmit}>
 
-                    <div>
+                    <FormDiv>
                         <label htmlFor="name">Name: </label>
                         <input onChange={this.handleChange}
                             name="name"
                             type="text"
                             value={this.state.newEvent.name}
                          required />
-                    </div>
+                    </FormDiv>
 
-                    <div>
+                    <FormDiv>
                         <label htmlFor="date">Date: </label>
                         <input onChange={this.handleChange}
                             name="date"
@@ -78,9 +88,9 @@ class CreateEvent extends Component {
                             value={this.state.newEvent.date}
                             required
                         />
-                    </div>
+                    </FormDiv>
 
-                    <div>
+                    <FormDiv>
                         <label htmlFor="season">Season (please enter either "ws" for winter/spring or "sf" for summer/fall): </label>
                         <input onChange={this.handleChange}
                             name="season"
@@ -88,9 +98,9 @@ class CreateEvent extends Component {
                             value={this.state.newEvent.season}
                             required
                         />
-                    </div>
+                    </FormDiv>
 
-                    <div>
+                    <FormDiv>
                         <label htmlFor="image">Image (please enter a valid URL) </label>
                         <input onChange={this.handleChange}
                             name="image"
@@ -98,7 +108,7 @@ class CreateEvent extends Component {
                             value={this.state.newEvent.image}
                             required
                         />
-                    </div>
+                    </FormDiv>
 
                     <input type="submit" value="Save New Event" />
 

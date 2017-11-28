@@ -48,7 +48,12 @@ const TownBody = styled.div`
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 14px;    
         align-items: center;
-        text-align: center;        
+        text-align: center;       
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-weight: bold; 
     };
 
     button:hover {
@@ -67,6 +72,12 @@ const TownBody = styled.div`
 const Buttons = styled.div`
     display: flex;
   `
+
+const EventButton = styled.div`
+    button {
+        font-weight: bold;
+    }
+`
 
 class Town extends Component {
     state = {
@@ -171,23 +182,25 @@ class Town extends Component {
                     <ShadowDiv>
                         <EventTextIntro town={this.state.town} />
                     </ShadowDiv>
-                    
+
                     <Buttons>
                         <button onClick={this.toggleShowWS}>Winter | Spring</button>
 
                         <button onClick={this.toggleShowSF}>Summer | Fall </button>
-                        </Buttons> 
+                    </Buttons>
 
-                        {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
+                    {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
-        
 
-                        {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
-                      
-                    
+
+                    {this.state.showSF ? <SFEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
+
+
                     <SubmitNewEventText town={this.state.town} />
 
-                    <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
+                    <EventButton>
+                        <button onClick={this.toggleShowCreate}>Add to {this.state.town.name}'s happenings</button>
+                    </EventButton>
 
                     <div>
                         {this.state.showCreate ? <CreateEvent townId={this.state.town.id} toggleShowCreate={this.toggleShowCreate} pushEvents={this.pushEvents} /> : null}

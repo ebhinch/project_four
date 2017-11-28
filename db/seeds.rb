@@ -99,7 +99,7 @@ trideEventTwo = Event.create({
     name: "Telluride Ski Resort Closing Day",
     date: "April 8, 2018",
     season: "ws",
-    image: "https://cdn.vox-cdn.com/uploads/chorus_asset/file/6176345/gorrono-ranch-1920x840-hero.jpg",
+    image: "http://www.tellurideskiresort.com/uploaded/page-hero/live-cams.jpg",
     town_id: telluride.id
 })
 

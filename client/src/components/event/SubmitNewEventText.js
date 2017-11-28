@@ -15,6 +15,7 @@ const AddEventText = styled.div`
     h4 {
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
+        text-align: center;
         
     }
 `
@@ -22,7 +23,7 @@ const AddEventText = styled.div`
 const SubmitNewEventText = (props) => {
     return (
         <AddEventText>
-            <h4>Know about a local happening, must-ski run, or other local occurence you don't see here? Add it to {props.town.name}'s roster below.</h4>
+            <h4>Know about a local happening, must-ski run, summertime hike, festival or other local occurence you don't see here? Add it to {props.town.name}'s roster below.</h4>
         </AddEventText>
     );
 };
