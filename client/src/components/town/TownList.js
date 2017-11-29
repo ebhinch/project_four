@@ -9,6 +9,7 @@ const TownContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10px;
+    justify-content: space-evenly;
     a:visited {
         color: navy
     };
@@ -42,6 +43,9 @@ const TownCard = styled.div`
     width: 30%;
     @media only screen and (max-width: 599px) {
         width: 95%;
+    }
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+        width: 40%;
     }
 `
 
