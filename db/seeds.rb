@@ -318,6 +318,70 @@ vailEventFour = Event.create({
     town_id: vail.id
 })
 
+ourayEventOne = Event.create({
+    name: "23rd Ouray Ice Festival",
+    date: "January 18 - 21, 2018",
+    season: "ws",
+    image: "https://static1.squarespace.com/static/5588cbb3e4b086577bcb0c31/t/55f9eebde4b00964f1c25d12/1442442941134/oip_websiteheader.jpg",
+    town_id: ouray.id
+})
+
+ourayEventTwo = Event.create({
+    name: "Ouray Ice Park: Kids' Climbing College",
+    date: "Saturdays through March",
+    season: "ws",
+    image: "https://mtnguide.net/wp-content/uploads/2012/10/ouray-ice-park-banner.jpg",
+    town_id: ouray.id
+})
+
+ourayEventThree = Event.create({
+    name: "Ouray Hot Air Ballooning",
+    date: "Throughout summer",
+    season: "sf",
+    image: "https://www.telluride.com/sites/default/files/styles/banner_slide/public/TTD%20Slider%20-%20Balloon%20Fest-13.jpg?itok=4vG2CZRJ",
+    town_id: ouray.id
+})
+
+ourayEventFour = Event.create({
+    name: "Horseback Riding",
+    date: "Throughout summer",
+    season: "sf",
+    image: "http://horseback.actionadventures.net/images/horseback_vacations.jpg",
+    town_id: ouray.id
+})
+
+durangoEventOne = Event.create({
+    name: "43rd Holiday Arts and Crafts Festival",
+    date: "December 1, 2017",
+    season: "ws",
+    image: "https://www.durango.com/wp-content/uploads/2009/11/christmas-durango-500.jpg",
+    town_id: durango.id
+})
+
+durangoEventTwo = Event.create({
+    name: "13th Annual Durango Independent Film Festival",
+    date: "February 28, 2017",
+    season: "ws",
+    image: "https://storage.googleapis.com/ff-storage-p01/festivals/cover_photos/000/002/857/original/cover_photo.jpg?1497549813",
+    town_id: durango.id
+})
+
+durangoEventThree = Event.create({
+    name: "Durango & Silverton Narrow Gauge Railroad", 
+    date: "Throughout Summer and Fall",
+    season: "sf",
+    image: "https://www.telluride.com/sites/default/files/styles/banner_slide/public/train.jpg?itok=vPd_Guhd",
+    town_id: durango.id
+})
+
+durangoEventFour = Event.create({
+    name: "Music in the Mountains Festival and Conservatory", 
+    date: "July 8 - 29, 2018",
+    season: "sf",
+    image: "http://www.musicinthemountains.com/images/mitmlogo.jpg",
+    town_id: durango.id
+})
+
 erica = User.create({
     email: "erica@gmail.com",
     password: "password",
