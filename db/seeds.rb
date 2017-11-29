@@ -485,12 +485,61 @@ oliveCommentTwo = Comment.create({
     title: "It's finally here!",
     text: "Can't wait for opening day! This season's snowfall is supposed to be epic.",
     user_id: olive.id, 
-    event_id: buffaloEventTwo
+    event_id: buffaloEventTwo.id
 })
 
 oliveCommentThree = Comment.create({
     title: "Sunset Ride?",
     text: "Planning a sunset ride one Thursday evening coming up. If you're interested, leave a comment here.",
     user_id: olive.id,
-    event_id: ourayEventFour
+    event_id: ourayEventFour.id
+})
+
+missyCommentThree = Comment.create({
+    title: "Weather Tip",
+    text: "Scheduling a ballooning trip? Make sure to check in with your guide morning-of to make sure the trip is a 'go.' Depending on weather, winds, etc. trips can be cancelled at the last minute.",
+    user_id: missy.id,
+    event_id: ourayEventThree.id
+})
+
+missyCommentFour = Comment.create({
+    title: "Climbing Clinic",
+    text: "Who all is planning to go to the clinic on the 20th? I'm planning to go and would love a buddy.",
+    user_id: missy.id,
+    event_id: ourayEventOne.id
+})
+
+mimiCommentTwo = Comment.create({
+    title: "12 year old class",
+    text: "My son John is planning to take this year's camp and is 12. Anyone else from Ouray Middle School planning to attend?",
+    user_id: mimi.id,
+    event_id: ourayEventTwo.id
+})
+
+missyCommentFive = Comment.create({
+    title: "12 year old class",
+    text: "Yes! Cooper is signed up too.",
+    user_id: missy.id,
+    event_id: ourayEventTwo.id
+})
+
+ericaCommentThree = Comment.create({
+    title: "Bittersweet",
+    text: "The most bittersweet day of every year. Excited to celebrate but sad for the mountain to close. Anyone want to celebrate in town that evening?",
+    user_id: erica.id,
+    event_id: trideEventTwo.id
+})
+
+missyCommentSix = Comment.create({
+    title: "Jazz Festival 2018",
+    text: "Can't wait! We have family already planning a trip for the festival. Best part of the summer.",
+    user_id: missy.id,
+    event_id: trideEventFour.id
+})
+
+ericaCommentFour = Comment.create({
+    title: "Nickel Creek",
+    text: "Wish we could get them back together and at Bluegrass next year.",
+    user_id: erica.id,
+    event_id: trideEventThree.id
 })
