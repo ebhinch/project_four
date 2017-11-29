@@ -108,11 +108,13 @@ class IndividualEvent extends Component {
                 <img src={this.state.event.image} />
                 <button onClick={this.toggleEditEvent}>Edit Event</button>
 
+                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
+
                 <h3>Comments: </h3>
                
                 {this.props.signedIn ? <button onClick={this.toggleShowCommentForm}>Add a Comment</button> : <CommentSignInAlert /> }
 
-                {this.state.editEventDetails ? <EditEvent event={this.state.event} eventId={this.props.match.params.eventId} townId = {this.props.match.params.townId} pushEventEdits={this.pushEventEdits} toggleEditEvent={this.toggleEditEvent} /> : null }
+    
 
                 <CommentList event={this.state.event} comments={this.state.event.comments} />
 

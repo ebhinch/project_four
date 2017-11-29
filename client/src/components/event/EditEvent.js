@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect } from 'react-router-dom'
+import styled from "styled-components"
+
+const Input = styled.input`
+    width: 70%;
+`
 
 
 class EditEvent extends Component {
@@ -47,7 +52,7 @@ class EditEvent extends Component {
 
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input onChange={this.handleChange}
+                        <Input onChange={this.handleChange}
                             name="name"
                             type="text"
                             value={this.state.updatedEvent.name}
