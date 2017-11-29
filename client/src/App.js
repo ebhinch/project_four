@@ -17,13 +17,23 @@ import styled from 'styled-components'
 import { injectGlobal } from 'styled-components'
 import background from './telluride_background.jpg'
 
+// injectGlobal`
+//   body {
+//     background-image: url(${background});
+//     background-position: center;
+//     background-size: cover;
+//     background-attachment: fixed;
+// }`
+
+
 injectGlobal`
-  body {
-    background-image: url(${background});
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+body {
+  background-image: url("https://static1.squarespace.com/static/54e272bae4b08bab4fc23b91/t/57509812d210b84ca7caccb2/1464899602524/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }`
+
 
 const AppBody = styled.div`
   display: flex;

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
+import home from '../telluride_background.jpg'
+
 
 const PageName = styled.h1`
     text-align: right;
@@ -9,6 +11,17 @@ const PageName = styled.h1`
     font-size: 3em;
 `
 
+const HomeBody = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        max-height: 500px;
+
+    }
+
+`
 
 
 
@@ -16,9 +29,12 @@ const PageName = styled.h1`
 
 const HomePage = (props) => {
     return (
-        <div>
+        <HomeBody>
             <PageName>ROCK YOUR LIFE</PageName>
-        </div>
+      
+            <img src={home}/>
+
+        </HomeBody>
     );
 };
 
