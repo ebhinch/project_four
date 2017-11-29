@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import styled from "styled-components"
 
 const Input = styled.input`
-    width: 70%;
+    width: 275px;
 `
 
 
