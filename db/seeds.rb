@@ -411,7 +411,7 @@ buffaloEventFour = Event.create({
     date: "December 2, 2017",
     season: "ws", 
     image: "http://www.chandleraz.gov/content/SE_ParadeOfLights_3.png",
-    town_id: buffalo.id
+    town_id: buffalo
 })
 
 erica = User.create({
@@ -472,4 +472,25 @@ missyCommentTwo = Comment.create({
     text: "What runs are most popular for a strong blue / groomed black skiier?",
     user_id: missy.id,
     event_id: ogdenEventTwo.id
+})
+
+ericaCommentTwo = Comment.create({
+    title: "Must Do!",
+    text: "This is a must-do attraction...especially if you are visiting with children. Summer or fall, are both great seasons for the ride. I will note, you won't miss anything if you only ride railroad one direction and drive back.",
+    user_id: erica.id,
+    event_id: durangoEventThree.id
+})
+
+oliveCommentTwo = Comment.create({
+    title: "It's finally here!",
+    text: "Can't wait for opening day! This season's snowfall is supposed to be epic.",
+    user_id: olive.id, 
+    event_id: buffaloEventTwo
+})
+
+oliveCommentThree = Comment.create({
+    title: "Sunset Ride?",
+    text: "Planning a sunset ride one Thursday evening coming up. If you're interested, leave a comment here.",
+    user_id: olive.id,
+    event_id: ourayEventFour
 })
