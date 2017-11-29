@@ -13,7 +13,6 @@ const TownContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
     
 `
 
@@ -71,6 +70,8 @@ const TownBody = styled.div`
 
 const Buttons = styled.div`
     display: flex;
+
+    justify-content: center;
   `
 
 const EventButton = styled.div`
@@ -181,7 +182,7 @@ class Town extends Component {
 
                     <ShadowDiv>
                         <EventTextIntro town={this.state.town} />
-                    </ShadowDiv>
+                    
 
                     <Buttons>
                         <button onClick={this.toggleShowWS}>Winter | Spring</button>
@@ -189,6 +190,7 @@ class Town extends Component {
                         <button onClick={this.toggleShowSF}>Summer | Fall </button>
                     </Buttons>
 
+                    </ShadowDiv>
                     {this.state.showWS ? <WSEventList town={this.state.town} events={this.state.town.events} townId={this.state.town.id} deleteEvent={this.deleteEvent} /> : null}
 
 
