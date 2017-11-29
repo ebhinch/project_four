@@ -382,6 +382,38 @@ durangoEventFour = Event.create({
     town_id: durango.id
 })
 
+buffaloEventOne = Event.create({
+    name: "Big Horn Mountain Festival",
+    date: "July 7 - 9, 2018",
+    season: "sf",
+    image: "http://www.bighornmountainfestival.com/images/bands/2017/PrairieWildfire.jpg",
+    town_id: buffalo.id
+})
+
+buffaloEventTwo = Event.create({
+    name: "Meadowlark Ski Lodge Opening Day",
+    date: "December 15, 2017",
+    season: "ws",
+    image: "http://wyofile.com/wp-content/uploads/2010/12/hometown-hills-telemark.jpg",
+    town_id: buffalo.id
+})
+
+buffaloEventThree = Event.create({
+    name: "Longmire Days",
+    date: "July 8-10, 2018",
+    season: "sf",
+    image: "http://www.rmimarketing.com/main/wp-content/uploads/sites/10/2017/01/cropped-Grand-Tetons-Wyoming-1.jpg",
+    town_id: buffalo.id
+})
+
+buffaloEventFour = Event.create({
+    name: "Christmas in Buffalo",
+    date: "December 2, 2017",
+    season: "ws", 
+    image: "http://www.chandleraz.gov/content/SE_ParadeOfLights_3.png",
+    town_id: buffalo.id
+})
+
 erica = User.create({
     email: "erica@gmail.com",
     password: "password",
