@@ -84,7 +84,7 @@ buffalo = Town.create({
     lng: 106.6989,
     description: "Buffalo is nestled in the foothills of the beautiful Big Horn Mountains. It’s located along the Cloud Peak Scenic Highway, which can bring you from Mount Rushmore to Yellowstone National Park. Main street has more than a dozen historical buildings and the town is filled with other historical sites – including the infamous “Hole in the Wall,”  the hideout of Butch Cassidy and the Sundance Kid with the rest of the “Wild Bunch.” Just like all the mountain towns, Buffalo is a great spot to go skiing, camping, hiking, boating, fishing, wildlife viewing, and more.",
     population: 4638,
-    image: "http://roadslesstraveled.us/blog/wp-content/uploads/2017/08/00-851-Buffalo-Wyoming-River-Runs-Through-It-mural-seen-on-an-RV-trip-to-town.jpg"
+    image: "http://jacksonhole-traveler-production.s3.amazonaws.com/wp-content/uploads/2014/11/ELK-refuge-Sleigh-ride-jacksonhole-1280x601.jpg"
 })
 
 trideEventOne = Event.create({
