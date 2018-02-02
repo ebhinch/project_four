@@ -12,7 +12,7 @@ telluride = Town.create({
     lng: 107.8123,
     description: "Telluride, a former Victorian mining town in Colorado’s Rocky Mountains, is set in a box canyon amid forested peaks at the base of a popular ski-and-golf resort. The town’s historic district houses landmarks like the Sheridan Opera House, a performing-arts venue originally built in 1913, and the Telluride Historical Museum, which showcases local history in a converted hospital built in 1896.",
     population: 2444,
-    image: "http://www.madelinetelluride.com/img/images/index-itinerary-2.jpg"
+    image: "https://www.snowindustrynews.com/media/1411/telluride.jpg"
 })
 
 taos = Town.create({
@@ -57,7 +57,7 @@ vail = Town.create({
     lng: 106.3742,
     description: "Vail is possibly the mountain town of your dreams. It’s located at the base of Vail Mountain, which is home to world renowned Vail Ski Resort. Vail sits within White River National Forest and every time you look around you, your mind is going to be blown! It’s a go-to travel spot for lovers of the outdoors, no matter the season! It’s a winter sport lover’s dream, a summer time spot for hiking, golfing, and festivals, and the autumn colors are postcard worthy. What are you waiting for?",
     population: 5483,
-    image: "http://drvail.dhr.sabredemos.com/images/masthead/masthead-home.jpg"
+    image: "http://www.travelenvogue.com/app/webroot/img/userfiles/Aspen%20summer.jpg"
 })
 
 ouray = Town.create({
